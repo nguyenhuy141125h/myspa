@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" type="image/png" href="https://myspa.vn/assets/frontend/images/favicon.png" />
+    <title>Myspa</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#" class="logo">
+          <img src="public/image/logo.png" alt="Myspa Logo" />
+        </a>
+
+        <!-- Menu desktop hiện tại -->
+        <nav class="nav">
+          <div class="nav-item">
+            <a href="#" class="nav-link">
+              Sản phẩm
+
+              <img class="drop-down-icon" src="public/image/icon.svg" alt="" />
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="#">Phần mềm quản lý phòng khám</a>
+              <a href="#">Phần mềm quản lý salon tóc</a>
+              <a href="#">Phần mềm quản lý tiệm nails</a>
+              <a href="#">Thiết kế App thương hiệu</a>
+              <a href="#">Thiết kế Mini App thương hiệu</a>
+              <a href="#">Lucky Wheel</a>
+              <a href="#">Marketing Automation ZNS</a>
+              <a href="#">Mở gian hàng trên BeautyX</a>
+            </div>
+          </div>
+
+          <a href="#" class="nav-link">Giải pháp</a>
+          <a href="#" class="nav-link">Khách hàng</a>
+          <a href="#" class="nav-link">Tài nguyên</a>
+          <a href="#" class="nav-link">Về chúng tôi</a>
+          <a href="#" class="nav-link">Bảng giá</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="nav-item">
+            <a href="#" class="lang nav-link"
+              >VI
+              <img class="drop-down-icon" src="public/image/icon.svg" alt=""
+            /></a>
+            <div class="dropdown-menu vi">
+              <a href="#">VI</a>
+              <a href="#">EN</a>
+            </div>
+          </div>
+          <a href="#" class="login-btn">Đăng nhập</a>
+          <a href="#" class="btn btn-primary">Đặt lịch demo</a>
+        </div>
+
+        <!-- Chỉ hiện trên tablet/mobile -->
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobileMenuOpen"
+          aria-label="Mở menu"
+          aria-expanded="false"
+        >
+         <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-top">
+        <a href="#" class="mobile-logo">
+          <img src="public/image/logo.png" alt="Myspa Logo" />
+        </a>
+
+        <button
+          type="button"
+          class="mobile-menu-close"
+          id="mobileMenuClose"
+          aria-label="Đóng menu"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-nav">
+        <details class="mobile-nav-dropdown">
+          <summary>
+            <span>Trang chủ</span>
+            <i class="bi bi-chevron-down"></i>
+          </summary>
+
+          <div class="mobile-submenu">
+            <a href="#">Phần mềm quản lý phòng khám</a>
+            <a href="#">Phần mềm quản lý salon tóc</a>
+            <a href="#">Phần mềm quản lý tiệm nails</a>
+            <a href="#">Thiết kế App thương hiệu</a>
+            <a href="#">Thiết kế Mini App thương hiệu</a>
+            <a href="#">Lucky Wheel</a>
+            <a href="#">Marketing Automation ZNS</a>
+            <a href="#">Mở gian hàng trên BeautyX</a>
+          </div>
+        </details>
+        <a href="#">Giải pháp</a>
+        <a href="#">Khách hàng</a>
+        <a href="#">Tài nguyên</a>
+        <a href="#">Về chúng tôi</a>
+        <a href="#">Bảng giá</a>
+        <details class="mobile-nav-dropdown">
+          <summary>
+            <span>VI</span>
+            <i class="bi bi-chevron-down"></i>
+          </summary>
+
+          <div class="mobile-submenu">
+            <a href="#">VI</a>
+            <a href="#">EN</a>
+          </div>
+        </details>
+        <div class="mobile-auth-actions">
+          <a href="#" class="mobile-login-btn"> Đăng nhập </a>
+
+          <a href="#" class="mobile-demo-btn">
+            Đặt lịch demo
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">+ Hạ tầng toàn diện cho ngành làm đẹp</div>
+
+          <h1 class="hero-title">
+            Hệ điều hành vận hành & mở rộng<br />
+            <span class="accent">ngành làm đẹp</span>
+          </h1>
+
+          <p class="hero-desc">
+            Myspa cung cấp nền tảng công nghệ hợp nhất giúp Spa, Clinic, Salon
+            và chuỗi làm đẹp nâng cao trải nghiệm khách hàng, tự động hóa vận
+            hành và tăng trưởng bền vững.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary"
+              >Đặt lịch demo <i class="bi bi-arrow-right"></i
+            ></a>
+            <a href="#" class="btn btn-outline"
+              >Khám phá nền tảng <i class="bi bi-caret-right"></i
+            ></a>
+          </div>
+
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <i class="bi bi-cloud-check"></i>
+
+              <div class="hero-feature-content">
+                <strong
+                  >Triển khai nhanh <br />
+                  (1–3 ngày)</strong
+                >
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <i class="bi bi-shield-check"></i>
+
+              <div class="hero-feature-content">
+                <strong
+                  >Bảo mật <br />
+                  Chuẩn doanh nghiệp</strong
+                >
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <i class="bi bi-headset"></i>
+
+              <div class="hero-feature-content">
+                <strong
+                  >Hỗ trợ <br />
+                  24/7</strong
+                >
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <i class="bi bi-buildings"></i>
+
+              <div class="hero-feature-content">
+                <strong
+                  >Được tin dùng bởi
+                  <br />
+                  10,000+ doanh nghiệp
+                </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="public/image/dash.png"
+            alt="Giao diện quản lý Myspa"
+            class="dashboard-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section class="metrics-strip">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-icon"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <strong>10,000+</strong>
+              <span>Doanh nghiệp tin dùng</span>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-icon"><i class="bi bi-people"></i></div>
+            <div>
+              <strong>3,000,000+</strong>
+              <span>Khách hàng được quản lý</span>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-icon"><i class="bi bi-calendar-event"></i></div>
+            <div>
+              <strong>50,000,000+</strong>
+              <span>Lượt đặt lịch đã xử lý</span>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-icon"><i class="bi bi-clock"></i></div>
+            <div>
+              <strong>500+</strong>
+              <span>Spa, Clinic & Salon</span>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-icon"><i class="bi bi-stopwatch"></i></div>
+            <div>
+              <strong>99.9%</strong>
+              <span>Thời gian hoạt động hệ thống</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ECOSYSTEM -->
+    <section class="section ecosystem-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="badge">Một nền tảng – tất cả trong một</div>
+
+          <h2>Hệ sinh thái toàn diện cho mọi doanh nghiệp làm đẹp</h2>
+
+          <p>Kết nối liền mạch – tích hợp đầy đủ – thiết kế để tăng trưởng.</p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <a href="#" class="eco-card">
+            <i class="bi bi-person"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: rgb(105, 185, 44)">Quản lý khách hàng (CRM)</h4>
+
+              <p>
+                Lưu trữ và quản lý thông tin khách hàng, lịch sử, sở thích và
+                tương tác.
+              </p>
+            </div>
+          </a>
+
+          <div class="eco-center">
+            <div class="eco-circle">
+              <div class="brand">
+                <img src="public/image/logo.png" alt="Myspa Logo" />
+              </div>
+
+              <p>Nền tảng vận hành doanh nghiệp làm đẹp</p>
+            </div>
+          </div>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-calendar-event"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: #168ce5">Đặt lịch & Nhắc lịch</h4>
+
+              <p>Đặt lịch online, nhắc lịch tự động, giảm tỷ lệ no-show.</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-megaphone"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: #6048df">Tự động hóa Marketing</h4>
+
+              <p>Gửi tin nhắn qua SMS, Email, Push App và mạng xã hội.</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-building"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: #6048df">POS & Bán hàng</h4>
+
+              <p>
+                Thanh toán nhanh chóng, nhiều phương thức và quản lý doanh thu.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-database"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: #f4a51f">Chương trình khách hàng thân thiết</h4>
+
+              <p>Tích điểm, voucher, hạng thành viên và ưu đãi tự động.</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-box"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: #ff6647">Quản lý kho & Vật tư</h4>
+
+              <p>Theo dõi tồn kho, cảnh báo thiếu hàng và tối ưu nhập hàng.</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-graph-up-arrow"></i>
+
+            <div class="eco-card-content">
+              <h4 style="color: #67b72c">Báo cáo & Phân tích</h4>
+
+              <p>
+                Dashboard thời gian thực, báo cáo chi tiết và dữ liệu dễ theo
+                dõi.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="center-cta">
+          <a href="#" class="btn btn-outline">
+            Khám phá tất cả tính năng <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- PARTNER -->
+    <section class="partner-section">
+      <div class="container partner-grid">
+        <!-- Nội dung bên trái -->
+        <div class="partner-left">
+          <div class="badge">
+            + Được tin dùng bởi các thương hiệu làm đẹp hàng đầu
+          </div>
+
+          <h2>Đối tác chiến lược thúc đẩy ngành làm đẹp Việt Nam</h2>
+
+          <p>
+            Myspa đồng hành cùng hàng nghìn doanh nghiệp làm đẹp trong hành
+            trình chuyển đổi số và tăng trưởng bền vững.
+          </p>
+
+          <div class="logos">
+            <span><img src="public/image/brand.png" alt=""></span>
+            <span><img src="public/image/brand.png" alt=""></span>
+            <span><img src="public/image/brand.png" alt=""></span>
+            <span><img src="public/image/brand.png" alt=""></span>
+            <span><img src="public/image/brand.png" alt=""></span>
+            <span><img src="public/image/brand.png" alt=""></span>
+          </div>
+        </div>
+
+        <!-- Các thẻ thống kê bên phải -->
+        <div class="partner-right">
+          <!-- Card 1 -->
+          <div class="stat-box">
+            <div class="stat-content">
+              <strong>10,000+</strong>
+              <p>
+                Doanh nghiệp<br />
+                sử dụng Myspa
+              </p>
+            </div>
+
+            <div class="stat-icon">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="stat-box">
+            <div class="stat-content">
+              <strong>50M+</strong>
+              <p>
+                Giao dịch<br />
+                mỗi tháng
+              </p>
+            </div>
+
+            <div class="stat-icon stat-icon-line">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="stat-box">
+            <div class="stat-content">
+              <strong>3M+</strong>
+              <p>
+                Khách hàng<br />
+                được quản lý
+              </p>
+            </div>
+
+            <div class="stat-icon">
+              <i class="bi bi-people"></i>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="stat-box">
+            <div class="stat-content">
+              <strong>500+</strong>
+              <p>
+                Nhân sự chuyên nghiệp<br />
+                trên nền tảng
+              </p>
+            </div>
+
+            <div class="stat-icon">
+              <i class="bi bi-person-badge-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SOLUTIONS -->
+    <section class="section solutions-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="badge">Giải pháp cho mọi mô hình doanh nghiệp</div>
+
+          <h2>Giải pháp linh hoạt cho mọi loại hình doanh nghiệp</h2>
+        </div>
+
+        <div class="solutions-grid">
+          <!-- Spa & Salon -->
+          <article class="solution-card">
+            <a href="#" class="solution-image">
+              <img
+                src="public/image/solution.png"
+                alt="Giải pháp quản lý Spa và Salon"
+              />
+            </a>
+
+            <div class="solution-body">
+              <h3 class="solution-title">
+                <a href="#">Spa & Salon</a>
+              </h3>
+
+              <p>
+                Quản lý vận hành, nâng cao trải nghiệm khách hàng và tăng hiệu
+                quả quay lại.
+              </p>
+
+              <a href="#" class="solution-link">
+                Xem giải pháp
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Clinic -->
+          <article class="solution-card">
+            <a href="#" class="solution-image">
+              <img
+                src="https://myspa.vn/assets/frontend/images/trusted-by-orient.jpg"
+                alt="Giải pháp quản lý Clinic và Thẩm mỹ viện"
+              />
+            </a>
+
+            <div class="solution-body">
+              <h3 class="solution-title">
+                <a href="#">Clinic & Thẩm mỹ viện</a>
+              </h3>
+
+              <p>
+                Chuẩn hóa quy trình, quản lý bác sĩ, điều trị và hành trình
+                khách hàng.
+              </p>
+
+              <a href="#" class="solution-link">
+                Xem giải pháp
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Chuỗi làm đẹp -->
+          <article class="solution-card">
+            <a href="#" class="solution-image">
+              <img
+                src="https://myspa.vn/assets/frontend/images/trusted-by-world-medical-center-2.jpg"
+                alt="Giải pháp quản lý chuỗi làm đẹp"
+              />
+            </a>
+
+            <div class="solution-body">
+              <h3 class="solution-title">
+                <a href="#">Chuỗi làm đẹp</a>
+              </h3>
+
+              <p>
+                Vận hành đa chi nhánh hiệu quả với hệ thống quản lý tập trung và
+                đồng bộ.
+              </p>
+
+              <a href="#" class="solution-link">
+                Xem giải pháp
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Mỹ phẩm và bán lẻ -->
+          <article class="solution-card">
+            <a href="#" class="solution-image">
+              <img
+                src="https://myspa.vn/assets/frontend/images/trusted-aqua.jpg"
+                alt="Giải pháp quản lý thương hiệu mỹ phẩm và bán lẻ"
+              />
+            </a>
+
+            <div class="solution-body">
+              <h3 class="solution-title">
+                <a href="#">Thương hiệu mỹ phẩm & bán lẻ</a>
+              </h3>
+
+              <p>
+                Quản lý hàng hóa, bán hàng đa kênh và chăm sóc khách hàng thân
+                thiết.
+              </p>
+
+              <a href="#" class="solution-link">
+                Xem giải pháp
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-grid">
+            <div class="cta-content">
+              <h2>
+                Xây dựng tương lai ngành làm đẹp với hạ tầng công nghệ phù hợp
+              </h2>
+
+              <p>
+                Thay đổi cách bạn vận hành, tương tác với khách hàng và phát
+                triển doanh nghiệp với nền tảng tất cả trong một cho ngành làm
+                đẹp.
+              </p>
+
+              <div class="cta-actions">
+                <a href="#" class="btn btn-light">
+                  Đặt lịch demo – Miễn phí
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <a href="#" class="btn btn-ghost">
+                  Trò chuyện với chuyên gia
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="cta-visual">
+              <img
+                src="public/image/cta-revenue-card.png"
+                alt="Doanh thu hôm nay"
+                class="cta-card-image cta-card-left"
+              />
+
+              <img
+                src="public/image/woman.png"
+                alt="Chuyên viên Myspa sử dụng máy tính bảng"
+                class="cta-woman"
+              />
+
+              <img
+                src="public/image/cta-rate-card.png"
+                alt="Tỷ lệ chốt đơn"
+                class="cta-card-image cta-card-right"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="integrations">
+      <div class="container">
+        <p>Tích hợp với các công cụ bạn đang sử dụng</p>
+
+        <div class="integration-logos">
+          <a href="#" aria-label="Zalo">
+            <img src="public/image/zalo.png" alt="Zalo" />
+          </a>
+
+          <a href="#" aria-label="Meta">
+            <img src="public/image/meta.webp" alt="Meta" />
+          </a>
+
+          <a href="#" aria-label="Google">
+            <img src="public/image/google.jpg" alt="Google" />
+          </a>
+
+          <a href="#" aria-label="TikTok">
+            <img src="public/image/tiktok.jpg" alt="TikTok" />
+          </a>
+
+          <a href="#" aria-label="MoMo">
+            <img src="public/image/momo.png" alt="MoMo" />
+          </a>
+
+          <a href="#" aria-label="VNPay">
+            <img src="public/image/vnpay.webp" alt="VNPay" />
+          </a>
+
+          <a href="#" aria-label="KiotViet">
+            <img src="public/image/meta.webp" alt="KiotViet" />
+          </a>
+
+          <a href="#" aria-label="Shopee">
+            <img src="public/image/tiktok.jpg" alt="Shopee" />
+          </a>
+
+          <a href="#" aria-label="LadiPage">
+            <img src="public/image/google.jpg" alt="LadiPage" />
+          </a>
+
+          <a href="#" aria-label="Google Business">
+            <img src="public/image/zalo.png" alt="Google Business" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        © 2026 Myspa. Giao diện landing page dựng bằng HTML & CSS.
+      </div>
+    </footer>
+    <script>
+      const mobileMenu = document.getElementById("mobileMenu");
+      const openMenuButton = document.getElementById("mobileMenuOpen");
+      const closeMenuButton = document.getElementById("mobileMenuClose");
+
+      function openMobileMenu() {
+        mobileMenu.classList.add("active");
+        document.body.classList.add("menu-open");
+        openMenuButton.setAttribute("aria-expanded", "true");
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        openMenuButton.setAttribute("aria-expanded", "false");
+      }
+
+      openMenuButton.addEventListener("click", openMobileMenu);
+      closeMenuButton.addEventListener("click", closeMobileMenu);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 1024) {
+          closeMobileMenu();
+        }
+      });
+    </script>
+  </body>
+</html>
