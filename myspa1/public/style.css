@@ -19,6 +19,8 @@
   --shadow: 0 12px 35px rgba(17, 24, 39, 0.08);
   --radius: 20px;
   --container: 1400px;
+  --header: #3b3a40;
+  --fontHeader: "Montserrat", sans-serif;
 }
 
 /* base */
@@ -43,7 +45,7 @@ a {
 }
 
 img {
-  max-width: 103%;
+  max-width: 110%;
   display: block;
 }
 
@@ -60,7 +62,7 @@ button {
 }
 
 .section {
-  padding: 20px 0;
+  padding: 55px 0;
 }
 
 .section-head {
@@ -69,10 +71,11 @@ button {
 }
 
 .section-head h2 {
-  font-size: 44px;
+  font-family: var(--fontHeader);
+  font-size: 38px;
   line-height: 1.2;
   margin: 10px 0 10px;
-  color: #16133b;
+  color: var(--header);
 }
 
 .section-head p {
@@ -84,29 +87,29 @@ button {
 
 .section-kicker,
 .hero-kicker {
+  font-family: var(--fontHeader);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 16px;
+  padding: 4px 16px;
   border-radius: 999px;
   color: var(--primary);
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  /* letter-spacing: 0.3px; */
-  margin: 40px 0 0px;
+  margin: 15px 0 0;
   border: 1px solid #bcb6e9;
 }
 
-/* buttons */
 .btn {
+  font-family: var(--fontHeader);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 14px 24px;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   border: 1px solid transparent;
   transition: 0.25s ease;
@@ -182,7 +185,7 @@ button {
   padding: 16px 0;
   color: var(--primary);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -252,7 +255,8 @@ button {
 
 .lang,
 .login-btn {
-  font-size: 14px;
+  font-family: var(--fontHeader);
+  font-size: 16px;
   color: #374151;
   padding: 11px 14px;
   border-radius: 12px;
@@ -265,7 +269,7 @@ button {
 .login-btn {
   background: #fff;
   border: 1px solid var(--border);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .login-btn:hover {
@@ -395,7 +399,7 @@ button {
 
 /* hero */
 .pricing-hero {
-  padding: 30px 0 50px;
+  padding: 25px 0 70px;
 }
 
 .hero-grid {
@@ -410,11 +414,12 @@ button {
 }
 
 .hero-title {
-  font-weight: 800;
-  color: #3b3a40;
-  font-size: 62px;
-  line-height: 1.46;
-  margin: 40px 0 35px;
+  font-family: var(--fontHeader);
+  font-weight: 700;
+  color: var(--header);
+  font-size: 52px;
+  line-height: 1.27;
+  margin: 35px 0 35px;
   letter-spacing: -1px;
 }
 
@@ -676,71 +681,41 @@ button {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   align-items: stretch;
-
   max-width: 1300px;
   margin: 0 auto;
 }
 
-/* ==================================================
-   PRICING CARD
-================================================== */
+/* PRICING CARD */
 
 .pricing-card {
   position: relative;
-
   display: flex;
   flex-direction: column;
-
   min-height: 570px;
   padding: 28px 24px 24px;
-
   background: #fff;
-
-  /*
-    Đặt sẵn border 2px để khi hover đổi sang màu tím
-    card không bị thay đổi kích thước / giật layout
-  */
   border: 2px solid #e9e8f2;
-
   border-radius: 18px;
-
   box-shadow: var(--shadow);
-
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-/* ==================================================
-   CARD TĂNG TRƯỞNG
-   Bình thường KHÔNG có viền tím
-================================================== */
-
 .pricing-card-popular {
   border-color: #e9e8f2;
   box-shadow: var(--shadow);
 }
 
-/* ==================================================
-   HOVER CARD KHỞI ĐẦU + TĂNG TRƯỞNG
-================================================== */
-
 .pricing-card:not(.pricing-card-dark):hover {
   transform: translateY(-4px);
-
   border-color: #5f44df;
-
   box-shadow: 0 16px 42px rgba(95, 68, 223, 0.15);
 }
 
-/* ==================================================
-   CARD DOANH NGHIỆP
-================================================== */
-
 .pricing-card-dark {
   color: #fff;
-
   background:
     radial-gradient(
       circle at 80% 10%,
@@ -748,47 +723,29 @@ button {
       transparent 25%
     ),
     linear-gradient(150deg, #11194d, #07113d);
-
   border-color: #11194d;
 }
 
 /* Hover card doanh nghiệp */
 .pricing-card-dark:hover {
   transform: translateY(-4px);
-
   box-shadow: 0 18px 42px rgba(8, 18, 75, 0.22);
 }
 
-/* ==================================================
-   NHÃN PHỔ BIẾN NHẤT
-================================================== */
-
 .popular-tag {
   position: absolute;
-
   top: -12px;
   left: 50%;
-
   transform: translateX(-50%);
-
   padding: 6px 12px;
-
   background: var(--primary);
   color: #fff;
-
   border-radius: 999px;
-
   font-size: 11px;
   font-weight: 800;
-
   white-space: nowrap;
-
   z-index: 2;
 }
-
-/* ==================================================
-   HEADER CỦA CARD
-================================================== */
 
 .pricing-card-head {
   display: flex;
@@ -796,94 +753,64 @@ button {
   gap: 14px;
 }
 
-/* ==================================================
-   PLAN ICON
-================================================== */
-
 .plan-icon {
   width: 48px;
   height: 48px;
-
   border-radius: 50%;
-
   display: grid;
   place-items: center;
-
   font-size: 20px;
-
   flex-shrink: 0;
-
   transition:
     transform 0.25s ease,
     background 0.25s ease,
     color 0.25s ease;
 }
 
-/* Icon Khởi đầu */
 .plan-icon.green {
   color: #65b737;
   background: #eef9e7;
 }
 
-/* Icon Tăng trưởng */
 .plan-icon.purple {
   color: #5f44df;
   background: #efebff;
 }
 
-/* Icon Doanh nghiệp */
 .plan-icon.dark {
   color: #e3ddff;
-
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Icon nhích nhẹ khi hover card */
 .pricing-card:hover .plan-icon {
   transform: scale(1.05);
 }
 
-/* ==================================================
-   TÊN GÓI
-================================================== */
-
 .pricing-card-head h3 {
+  font-family: var(--fontHeader);
   font-size: 26px;
   line-height: 1.15;
-
   color: inherit;
 }
 
-/* Mô tả dưới tên gói */
 .pricing-card-head p {
   margin-top: 4px;
-
   color: #7b7a88;
-
   font-size: 13px;
 }
 
-/* Mô tả card doanh nghiệp */
 .pricing-card-dark .pricing-card-head p {
   color: rgba(255, 255, 255, 0.7);
 }
-
-/* ==================================================
-   PRICE
-================================================== */
 
 .plan-price {
   margin-top: 26px;
 }
 
-/* "Chỉ từ", "Chi phí" */
 .plan-price small {
   display: block;
-
   margin-bottom: 4px;
-
   color: #7a7889;
-
   font-size: 12px;
   font-weight: 700;
 }
@@ -894,105 +821,72 @@ button {
   gap: 8px;
 }
 
-/* $9, $29 */
 .plan-price strong {
-  font-size: 48px;
+  font-size: 44px;
   line-height: 1;
-
   color: inherit;
 }
 
-/* "Liên hệ" ở Enterprise */
 .pricing-card-dark .plan-price strong {
   font-size: 40px;
 }
 
-/* /tháng */
 .plan-price span {
   color: #787687;
-
   font-size: 14px;
   font-weight: 700;
 }
 
-/* Thanh toán theo năm */
 .plan-price p {
   margin-top: 6px;
-
   color: #7a7889;
-
   font-size: 12px;
 }
 
-/* Text giá trong card doanh nghiệp */
 .pricing-card-dark .plan-price small,
 .pricing-card-dark .plan-price p,
 .pricing-card-dark .plan-price span {
   color: rgba(255, 255, 255, 0.68);
 }
 
-/* ==================================================
-   DANH SÁCH TÍNH NĂNG
-================================================== */
-
 .plan-features {
   list-style: none;
-
   margin: 24px 0 28px;
-
   display: flex;
   flex-direction: column;
-
   gap: 13px;
 }
 
 .plan-features li {
   display: flex;
   align-items: flex-start;
-
   gap: 9px;
-
   color: #37354a;
-
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
 }
 
-/* Dấu check */
 .plan-features i {
   color: #65b737;
-
   font-size: 14px;
-
   flex-shrink: 0;
-
   margin-top: 2px;
 }
 
-/* Text card doanh nghiệp */
 .pricing-card-dark .plan-features li {
   color: rgba(255, 255, 255, 0.87);
 }
 
-/* ==================================================
-   BUTTON
-================================================== */
-
 .plan-btn {
   width: 100%;
-
   margin-top: auto;
 }
 
-/* Button Starter */
 .plan-btn-outline {
   border: 1.5px solid #c9c4f2;
-
   color: var(--primary);
-
   background: #fff;
-
   transition:
     background 0.25s ease,
     color 0.25s ease,
@@ -1003,22 +897,15 @@ button {
 
 .plan-btn-outline:hover {
   border-color: var(--primary);
-
   color: #fff;
-
   background: var(--primary);
-
   box-shadow: 0 8px 20px rgba(91, 61, 245, 0.2);
 }
 
-/* Button Enterprise */
 .plan-btn-dark {
   border: 1.5px solid rgba(255, 255, 255, 0.28);
-
   color: #fff;
-
   background: transparent;
-
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -1027,13 +914,8 @@ button {
 
 .plan-btn-dark:hover {
   border-color: #fff;
-
   background: rgba(255, 255, 255, 0.08);
 }
-
-/* ==================================================
-   CUSTOM SOLUTION
-================================================== */
 
 .custom-solution {
   margin-top: 38px;
@@ -1044,16 +926,15 @@ button {
 
 .custom-solution a {
   color: var(--primary);
-
   font-weight: 700;
 }
 
 .custom-solution a:hover {
   text-decoration: underline;
 }
-/* compare */
+
 .compare-section {
-  padding: 26px 0 10px;
+  padding: 15px 0 10px;
 }
 
 .compare-table-wrap {
@@ -1141,40 +1022,22 @@ button {
   font-size: 18px;
 }
 
-/* ==================================================
-   AI SECTION
-================================================== */
-
+/* AI SECTION */
 .ai-section {
-  padding: 28px 0 50px;
+  padding: 60px 0 60px;
 }
-
-/* ==================================================
-   AI PANEL
-================================================== */
 
 .ai-panel {
   display: grid;
-
-  /* Intro + 5 card */
   grid-template-columns:
     2fr
     repeat(5, minmax(0, 1fr));
-
   gap: 12px;
-
   padding: 16px;
-
   background: linear-gradient(110deg, #f5f3ff, #fafaff);
-
   border: 1px solid #efeefa;
-
   border-radius: 18px;
 }
-
-/* ==================================================
-   INTRO
-================================================== */
 
 .ai-intro {
   padding: 8px 10px 8px 6px;
@@ -1182,42 +1045,28 @@ button {
 
 .ai-intro h2 {
   margin: 0;
-
-  color: #1c1a43;
-
+  color: var(--header);
   font-size: 28px;
   font-weight: 700;
-
   line-height: 1.3;
 }
 
 .ai-intro p {
   max-width: 290px;
-
   margin-top: 12px;
-
   color: #777486;
-
   font-size: 14px;
-
   line-height: 1.6;
 }
 
 .ai-intro a {
   display: inline-flex;
-
   align-items: center;
-
   gap: 6px;
-
   margin-top: 20px;
-
   color: var(--primary);
-
   font-size: 13px;
-
   font-weight: 800;
-
   transition:
     color 0.25s ease,
     gap 0.25s ease;
@@ -1225,104 +1074,59 @@ button {
 
 .ai-intro a:hover {
   color: #78bd28;
-
   gap: 10px;
 }
 
-/* ==================================================
-   AI CARD
-================================================== */
-
 .ai-card {
   display: flex;
-
   flex-direction: column;
-
   min-width: 0;
-
   min-height: 170px;
-
   padding: 14px 12px;
-
   background: #ffffff;
-
   border: 1px solid #efedf8;
-
   border-radius: 14px;
-
   box-shadow: 0 10px 25px rgba(51, 44, 95, 0.04);
-
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-/* Hover card */
 .ai-card:hover {
   transform: translateY(-4px);
-
   border-color: rgba(95, 68, 223, 0.3);
-
   box-shadow: 0 14px 30px rgba(50, 39, 110, 0.09);
 }
 
-/* ==================================================
-   CARD TITLE
-================================================== */
-
 .ai-card h3 {
   margin: 0;
-
-  color: #201d42;
-
+  color: var(--header);
   font-size: 15px;
-
   font-weight: 700;
-
   line-height: 1.35;
 }
 
-/* ==================================================
-   CARD DESCRIPTION
-================================================== */
-
 .ai-card p {
   margin-top: 7px;
-
   margin-bottom: 14px;
-
   color: #817f8d;
-
   font-size: 12px;
-
   line-height: 1.5;
 }
 
-/* ==================================================
-   CARD 1 + CARD 2
-   ICON CHÍNH
-================================================== */
-
 .ai-single-icon {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 52px;
-
   margin-top: auto;
-
   color: #7562e6;
 }
 
 .ai-single-icon i {
   font-size: 80px;
-
   line-height: 1;
-
   transition:
     transform 0.25s ease,
     color 0.25s ease;
@@ -1330,44 +1134,27 @@ button {
 
 .ai-card:hover .ai-single-icon i {
   transform: scale(1.08);
-
   color: var(--primary);
 }
 
-/* ==================================================
-   CARD 3
-   AUTOMATION ICONS
-================================================== */
-
+/* CARD 3 */
 .automation-icons {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 8px;
-
   min-height: 52px;
-
   margin-top: 55px;
 }
 
 .automation-icons span {
   display: grid;
-
   place-items: center;
-
   width: 45px;
-
   height: 45px;
-
   color: var(--primary);
-
   background: #f1efff;
-
   border-radius: 7px;
-
   transition:
     transform 0.25s ease,
     color 0.25s ease,
@@ -1376,34 +1163,22 @@ button {
 
 .automation-icons i {
   font-size: 24px;
-
   line-height: 1;
 }
 
 .ai-card:hover .automation-icons span {
   color: #ffffff;
-
   background: var(--primary);
-
   transform: translateY(-2px);
 }
 
-/* ==================================================
-   CARD 4
-   CUSTOMER INTELLIGENCE
-================================================== */
-
+/* CARD 4 */
 .customer-intelligence {
   display: flex;
-
   align-items: flex-end;
-
   justify-content: center;
-
   gap: 10px;
-
   min-height: 52px;
-
   margin-top: auto;
 }
 
@@ -1424,28 +1199,20 @@ button {
 
 .avatar i {
   font-size: 40px;
-
   line-height: 1;
 }
 
-/* Bar nhỏ */
 .tiny-bars {
   display: flex;
-
   align-items: flex-end;
-
   gap: 4px;
-
   height: 31px;
 }
 
 .tiny-bars i {
   display: block;
-
   width: 6px;
-
   background: linear-gradient(180deg, #b6a9ff, #7057e9);
-
   border-radius: 3px 3px 0 0;
 }
 
@@ -1465,355 +1232,38 @@ button {
   height: 15px;
 }
 
-/* ==================================================
-   CARD 5
-   REVENUE
-================================================== */
-
+/* CARD 5 */
 .revenue-visual {
   display: flex;
-
   flex-direction: column;
-
   justify-content: flex-end;
-
   min-height: 52px;
-
   margin-top: auto;
 }
 
 .growth-number {
   display: block;
-
   color: #56ae37;
-
   font-size: 17px;
-
   font-weight: 700;
-
   line-height: 1;
 }
 
 .mini-line {
   width: 100%;
-
   height: 30px;
-
   margin-top: 6px;
-
   overflow: visible;
 }
 
 .mini-line polyline {
   fill: none;
-
   stroke: #aa9eea;
-
   stroke-width: 2;
-
   stroke-linecap: round;
-
   stroke-linejoin: round;
 }
 
-/* ==================================================
-   RESPONSIVE
-   TABLET LỚN
-================================================== */
-
-@media (max-width: 1200px) {
-  .ai-panel {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  /* Intro chiếm nguyên hàng */
-  .ai-intro {
-    grid-column: 1 / -1;
-
-    padding-bottom: 16px;
-  }
-
-  .ai-intro p {
-    max-width: 620px;
-  }
-}
-
-/* ==================================================
-   TABLET
-================================================== */
-
-@media (max-width: 768px) {
-  .ai-section {
-    padding-top: 24px;
-
-    padding-bottom: 38px;
-  }
-
-  .ai-panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-
-    padding: 13px;
-
-    border-radius: 16px;
-  }
-
-  .ai-intro {
-    grid-column: 1 / -1;
-
-    padding: 10px 8px 18px;
-
-    text-align: center;
-  }
-
-  .ai-intro h2 {
-    font-size: 22px;
-  }
-
-  .ai-intro p {
-    max-width: 520px;
-
-    margin-left: auto;
-
-    margin-right: auto;
-
-    font-size: 13px;
-  }
-
-  .ai-intro a {
-    justify-content: center;
-  }
-
-  .ai-card {
-    min-height: 165px;
-
-    padding: 13px 11px;
-  }
-
-  .ai-card h3 {
-    font-size: 14px;
-  }
-
-  .ai-card p {
-    font-size: 11px;
-  }
-
-  /* Card 1 + 2 */
-  .ai-single-icon i {
-    font-size: 31px;
-  }
-
-  /* Card 3 */
-  .automation-icons span {
-    width: 26px;
-
-    height: 26px;
-  }
-
-  .automation-icons i {
-    font-size: 12px;
-  }
-
-  /* Card 4 */
-  .avatar {
-    width: 27px;
-
-    height: 27px;
-  }
-
-  .tiny-bars {
-    height: 28px;
-  }
-
-  .card4 {
-    font-size: 60px;
-  }
-
-  /* Card 5 */
-  .growth-number {
-    font-size: 16px;
-  }
-}
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 480px) {
-  .ai-section {
-    padding-top: 20px;
-
-    padding-bottom: 35px;
-  }
-
-  .ai-panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 8px;
-
-    padding: 10px;
-
-    border-radius: 14px;
-  }
-
-  .ai-intro {
-    grid-column: 1 / -1;
-
-    padding: 8px 4px 15px;
-  }
-
-  .ai-intro h2 {
-    font-size: 20px;
-
-    line-height: 1.3;
-  }
-
-  .ai-intro p {
-    font-size: 12px;
-
-    line-height: 1.55;
-  }
-
-  .ai-intro a {
-    margin-top: 14px;
-
-    font-size: 12px;
-  }
-
-  .ai-card {
-    min-height: 155px;
-
-    padding: 12px 10px;
-
-    border-radius: 12px;
-  }
-
-  .ai-card h3 {
-    font-size: 13px;
-
-    line-height: 1.3;
-  }
-
-  .ai-card p {
-    margin-top: 6px;
-
-    margin-bottom: 10px;
-
-    font-size: 10px;
-
-    line-height: 1.45;
-  }
-
-  /* =================
-     CARD 1 + 2
-  ================= */
-
-  .ai-single-icon {
-    min-height: 44px;
-  }
-
-  .ai-single-icon i {
-    font-size: 27px;
-  }
-
-  /* =================
-     CARD 3
-  ================= */
-
-  .automation-icons {
-    min-height: 44px;
-
-    gap: 6px;
-  }
-
-  .automation-icons span {
-    width: 24px;
-
-    height: 24px;
-
-    border-radius: 6px;
-  }
-
-  .automation-icons i {
-    font-size: 11px;
-  }
-
-  /* =================
-     CARD 4
-  ================= */
-
-  .customer-intelligence {
-    min-height: 44px;
-
-    gap: 8px;
-  }
-
-  .avatar {
-    width: 25px;
-
-    height: 25px;
-  }
-
-  .avatar i {
-    font-size: 12px;
-  }
-
-  .tiny-bars {
-    height: 26px;
-
-    gap: 3px;
-  }
-
-  .tiny-bars i {
-    width: 5px;
-  }
-
-  .tiny-bars i:nth-child(1) {
-    height: 9px;
-  }
-
-  .tiny-bars i:nth-child(2) {
-    height: 16px;
-  }
-
-  .tiny-bars i:nth-child(3) {
-    height: 25px;
-  }
-
-  .tiny-bars i:nth-child(4) {
-    height: 20px;
-  }
-
-  /* =================
-     CARD 5
-  ================= */
-
-  .growth-number {
-    font-size: 14px;
-  }
-
-  .mini-line {
-    height: 25px;
-
-    margin-top: 4px;
-  }
-}
-
-/* ==================================================
-   MOBILE RẤT NHỎ
-================================================== */
-
-@media (max-width: 350px) {
-  .ai-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .ai-intro {
-    grid-column: 1;
-  }
-}
-/* impact */
 .impact-section {
   padding-bottom: 16px;
 }
@@ -1825,7 +1275,7 @@ button {
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
+  gap: 24px;
 }
 
 .impact-card {
@@ -1907,11 +1357,12 @@ button {
 }
 
 .trusted-title {
+  font-family: var(--fontHeader);
   margin-bottom: 18px;
   text-align: center;
-  color: #444154;
+  color: var(--header);
   font-size: 28px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .trusted-logos {
@@ -1964,8 +1415,7 @@ button {
 }
 
 .faq-section {
-  padding-top: 28px;
-  padding-bottom: 42px;
+  padding: 56px 0 70px;
 }
 
 .faq-grid {
@@ -2051,6 +1501,7 @@ button {
 }
 
 .final-cta-copy h2 {
+  font-family: var(--fontHeader);
   font-size: 38px;
   line-height: 1.2;
 }
@@ -2102,10 +1553,10 @@ button {
 
 .float-card img,
 .center-person img {
-  width: 103%;
+  width: 110%;
   height: auto;
   object-fit: contain;
-  margin: 0 0 -19px 0;
+  margin: 0 0 -30px 0;
 }
 
 .media-placeholder.small-card,
@@ -2160,6 +1611,15 @@ button {
   .ai-card:nth-child(5),
   .ai-card:nth-child(6) {
     grid-column: span 1;
+  }
+
+  .ai-intro {
+    grid-column: 1 / -1;
+    padding-bottom: 16px;
+  }
+
+  .ai-intro p {
+    max-width: 620px;
   }
 }
 
@@ -2317,7 +1777,84 @@ button {
   }
 
   .final-cta-copy h2 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+
+  .ai-section {
+    padding-top: 24px;
+    padding-bottom: 38px;
+  }
+
+  .ai-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 13px;
+    border-radius: 16px;
+  }
+
+  .ai-intro {
+    grid-column: 1 / -1;
+    padding: 10px 8px 18px;
+    text-align: center;
+  }
+
+  .ai-intro h2 {
+    font-size: 22px;
+  }
+
+  .ai-intro p {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+  }
+
+  .ai-intro a {
+    justify-content: center;
+  }
+
+  .ai-card {
+    min-height: 165px;
+
+    padding: 13px 11px;
+  }
+
+  .ai-card h3 {
+    font-size: 14px;
+  }
+
+  .ai-card p {
+    font-size: 11px;
+  }
+
+  .ai-single-icon i {
+    font-size: 31px;
+  }
+
+  .automation-icons span {
+    width: 26px;
+    height: 26px;
+  }
+
+  .automation-icons i {
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 27px;
+    height: 27px;
+  }
+
+  .tiny-bars {
+    height: 28px;
+  }
+
+  .card4 {
+    font-size: 60px;
+  }
+
+  .growth-number {
+    font-size: 16px;
   }
 }
 
@@ -2423,7 +1960,7 @@ button {
   }
 
   .final-cta-copy h2 {
-    font-size: 27px;
+    font-size: 24px;
   }
 
   .final-cta-copy p {
@@ -2509,7 +2046,7 @@ button {
 .btn,
 .custom-solution,
 .ai-card h3 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .plan-price small,
 .plan-price p,
@@ -2524,6 +2061,13 @@ button {
     object-fit: contain;
     margin: 0 0px -1px 23px;
   }
+
+  .hero-actions .btn,
+  .final-cta-actions .btn {
+    max-width: 300px;
+    margin: auto;
+  }
+
   .section-kicker,
   .hero-kicker {
     margin: 0px;
@@ -2565,7 +2109,7 @@ button {
   .pricing-card-head p,
   .btn,
   .custom-solution {
-    font-size: 18px;
+    font-size: 16px;
   }
   .plan-price small,
   .plan-price p {
@@ -2633,60 +2177,6 @@ button {
     font-weight: 700;
   }
 }
-@media only screen and (max-width: 480px) {
-  .btn {
-    font-size: 15px;
-  }
-  .hero-title,
-  .section-head h2,
-  .ai-intro h2,
-  .impact-card strong,
-  .final-cta-copy h2 {
-    font-size: 24px;
-  }
-  .ai-intro p,
-  .section-head p,
-  .plan-features li,
-  .pricing-card-head p,
-  .btn,
-  .custom-solution {
-    font-size: 14px;
-  }
-  .plan-price small,
-  .plan-price p,
-  .final-cta-copy p {
-    font-size: 14px;
-  }
-  .metrics-bar,
-  article.pricing-card.pricing-card-dark {
-    padding: 20px;
-  }
-  .section {
-    padding: 30px 0;
-  }
-  .trusted-logos {
-    grid-template-columns: 1fr 1fr;
-  }
-  .container {
-    width: min(var(--container), calc(100% - 20px));
-  }
-  .ai-panel {
-    grid-template-columns: 1fr 1fr;
-  }
-  .impact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .final-cta-copy {
-    padding: 15px;
-  }
-  .float-card.right,
-  .float-card.left {
-    width: 170px;
-  }
-  .center-person {
-    width: 200px;
-  }
-}
 
 @media only screen and (max-width: 375px) {
   .trusted-logos {
@@ -2703,7 +2193,7 @@ button {
     width: 180px;
   }
 
-  .automation-icons span i{
+  .automation-icons span i {
     font-size: 18px;
   }
 
@@ -2713,4 +2203,139 @@ button {
   }
 }
 @media only screen and (max-width: 320px) {
+}
+
+@media (max-width: 480px) {
+  .ai-section {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
+
+  .ai-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .ai-intro {
+    grid-column: 1 / -1;
+    padding: 8px 4px 15px;
+  }
+
+  .ai-intro h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ai-intro p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .ai-intro a {
+    margin-top: 14px;
+    font-size: 12px;
+  }
+
+  .ai-card {
+    min-height: 155px;
+    padding: 12px 10px;
+    border-radius: 12px;
+  }
+
+  .ai-card h3 {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .ai-card p {
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .ai-single-icon {
+    min-height: 44px;
+  }
+
+  .ai-single-icon i {
+    font-size: 27px;
+  }
+
+  .automation-icons {
+    min-height: 44px;
+    gap: 6px;
+  }
+
+  .automation-icons span {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .automation-icons i {
+    font-size: 11px;
+  }
+
+  .customer-intelligence {
+    min-height: 44px;
+    gap: 8px;
+  }
+
+  .avatar {
+    width: 25px;
+    height: 25px;
+  }
+
+  .avatar i {
+    font-size: 12px;
+  }
+
+  .tiny-bars {
+    height: 26px;
+
+    gap: 3px;
+  }
+
+  .tiny-bars i {
+    width: 5px;
+  }
+
+  .tiny-bars i:nth-child(1) {
+    height: 9px;
+  }
+
+  .tiny-bars i:nth-child(2) {
+    height: 16px;
+  }
+
+  .tiny-bars i:nth-child(3) {
+    height: 25px;
+  }
+
+  .tiny-bars i:nth-child(4) {
+    height: 20px;
+  }
+
+  .growth-number {
+    font-size: 14px;
+  }
+
+  .mini-line {
+    height: 25px;
+
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 350px) {
+  .ai-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-intro {
+    grid-column: 1;
+  }
 }

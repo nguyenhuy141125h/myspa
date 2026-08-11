@@ -18,10 +18,12 @@
   --shadow: 0 12px 35px rgba(17, 24, 39, 0.08);
   --radius: 20px;
   --container: 1400px;
+  --header: #3b3a40;
+  --fontHeader: "Montserrat", sans-serif;
 }
 
 body {
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -47,13 +49,14 @@ img {
 }
 
 .btn {
+  font-family: var(--fontHeader);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 14px 24px;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   border: 1px solid transparent;
   transition: 0.25s ease;
@@ -82,17 +85,16 @@ img {
 }
 
 .badge {
+  font-family: var(--fontHeader);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 16px;
+  padding: 4px 16px;
   border-radius: 999px;
-
   color: var(--primary);
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  /* letter-spacing: 0.3px; */
   margin: 40px 0 0px;
   border: 1px solid #bcb6e9;
 }
@@ -153,7 +155,7 @@ img {
   padding: 25px 0;
   color: var(--primary);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -189,19 +191,14 @@ img {
   position: fixed;
   inset: 0;
   z-index: 9999;
-
   width: 100%;
   height: 100dvh;
   padding: 30px 20px 50px;
-
   overflow-y: auto;
-
   background: #f7f7fa;
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(-15px);
-
   transition:
     opacity 0.25s ease,
     visibility 0.25s ease,
@@ -230,14 +227,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 52px;
   height: 52px;
-
   color: #725dc8;
   background: transparent;
   border: 0;
-
   font-size: 38px;
   cursor: pointer;
 }
@@ -270,9 +264,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
-
   width: max-content;
-
   list-style: none;
   cursor: pointer;
 }
@@ -320,96 +312,10 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* Tablet và mobile */
-@media (max-width: 1023px) {
-  .header-inner {
-    min-height: 105px;
-    padding: 0;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  .header .logo img {
-    width: 190px;
-  }
-
-  .header .nav,
-  .header .header-actions {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-}
-
-/* Điện thoại */
-@media (max-width: 576px) {
-  .header-inner {
-    min-height: 82px;
-    justify-content: space-between;
-  }
-
-  .header .logo img {
-    width: 145px;
-  }
-
-  .mobile-menu-toggle {
-    gap: 5px;
-  }
-
-  .mobile-menu-toggle span {
-    width: 6px;
-    height: 6px;
-  }
-
-  .mobile-menu {
-    padding: 24px 26px 40px;
-  }
-
-  .mobile-menu-top {
-    margin-bottom: 42px;
-  }
-
-  .mobile-logo img {
-    width: 165px;
-  }
-
-  .mobile-menu-close {
-    width: 42px;
-    height: 42px;
-    font-size: 30px;
-  }
-
-  .mobile-nav {
-    gap: 29px;
-  }
-
-  .mobile-nav > a,
-  .mobile-nav-dropdown summary {
-    font-size: 23px;
-  }
-
-  .mobile-submenu a {
-    font-size: 16px;
-  }
-
-  .mobile-auth-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .mobile-login-btn,
-  .mobile-demo-btn {
-    width: 100%;
-  }
-}
-
 .mobile-auth-actions {
   display: flex;
   align-items: center;
   gap: 14px;
-
   width: 100%;
   max-width: 470px;
   padding-top: 10px;
@@ -421,10 +327,8 @@ body.menu-open {
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   min-height: 52px;
   padding: 13px 24px;
-
   border-radius: 12px;
   font-size: 17px;
   font-weight: 700;
@@ -438,11 +342,9 @@ body.menu-open {
 
 .mobile-demo-btn {
   flex: 1;
-
   color: #ffffff;
   background: var(--primary);
   border: 1px solid var(--primary);
-
   box-shadow: 0 8px 20px rgba(91, 61, 245, 0.2);
 }
 
@@ -472,23 +374,18 @@ body.menu-open {
   position: absolute;
   top: 100%;
   left: 0;
-
   width: 410px;
   padding: 14px 0;
-
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 35px rgba(53, 42, 111, 0.15);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
-
   transition:
     opacity 0.25s ease,
     visibility 0.25s ease,
     transform 0.25s ease;
-
   z-index: 1000;
 }
 
@@ -503,12 +400,10 @@ body.menu-open {
 .dropdown-menu a {
   display: block;
   padding: 13px 24px;
-
   color: #6f57d2;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-
   transition: 0.2s ease;
 }
 
@@ -525,7 +420,8 @@ body.menu-open {
 
 .lang,
 .login-btn {
-  font-size: 14px;
+  font-family: var(--fontHeader);
+  font-size: 16px;
   color: #374151;
   padding: 11px 14px;
   border-radius: 12px;
@@ -546,7 +442,7 @@ body.menu-open {
 .login-btn {
   background: #fff;
   border: 1px solid var(--border);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* HERO */
@@ -568,11 +464,12 @@ body.menu-open {
 }
 
 .hero-title {
-  font-weight: 800;
-  color: #3b3a40;
-  font-size: 62px;
-  line-height: 1.46;
-  margin: 40px 0 35px;
+  font-family: var(--fontHeader);
+  font-weight: 700;
+  color: var(--header);
+  font-size: 52px;
+  line-height: 1.27;
+  margin: 35px 0 35px;
   letter-spacing: -1px;
 }
 
@@ -716,17 +613,17 @@ body.menu-open {
 
 .ecosystem-section .section-head .badge {
   margin: 0;
-  padding: 6px 14px;
+  padding: 4px 14px;
 
   color: var(--primary);
   font-size: 16px;
 }
 
 .ecosystem-section .section-head h2 {
+  font-family: var(--fontHeader);
   margin: 12px 0 20px;
-
-  color: #17133d;
-  font-size: 44px;
+  color: var(--header);
+  font-size: 38px;
   line-height: 1.2;
 }
 
@@ -737,27 +634,21 @@ body.menu-open {
 
 .ecosystem-grid {
   position: relative;
-
   display: grid;
   grid-template-columns:
     minmax(280px, 1fr)
     340px
     minmax(280px, 1fr);
-
   grid-template-rows:
     minmax(110px, auto)
     minmax(110px, auto)
     minmax(110px, auto)
     minmax(110px, auto);
-
   align-items: center;
-
   column-gap: 85px;
   row-gap: 28px;
-
   width: 100%;
   max-width: 1200px;
-
   margin: 45px auto 0;
 }
 
@@ -801,10 +692,8 @@ body.menu-open {
 .ecosystem-grid > .eco-card:nth-child(8) {
   grid-column: 2;
   grid-row: 4;
-
   width: 100%;
   max-width: 320px;
-
   justify-self: center;
 }
 
@@ -826,66 +715,53 @@ body.menu-open {
   transform: rotate(90deg);
 }
 
-   /* CARD */
-
+/* CARD */
 .eco-card {
   position: relative;
-
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
   align-items: center;
   column-gap: 15px;
-
   width: 100%;
   height: 140px;
   padding: 20px 24px;
-
   color: inherit;
   text-decoration: none;
-
   background: #ffffff;
   border: 1px solid #f0eef8;
   border-radius: 14px;
-
   box-shadow: 0 10px 30px rgba(67, 53, 140, 0.07);
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
 
-/* Icon nằm giữa theo chiều ngang và dọc */
 .eco-card > i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   justify-self: center;
   align-self: center;
-
   width: 42px;
   height: 42px;
-
   border-radius: 12px;
   background: #f3f0ff;
-
   color: var(--primary);
   font-size: 23px;
   line-height: 1;
-
   transition:
     color 0.25s ease,
     background 0.25s ease,
     transform 0.25s ease;
 }
 
-/* Nội dung chữ */
 .eco-card > div {
   min-width: 0;
 }
 
 .eco-card h4 {
+  font-family: var(--fontHeader);
   margin: 0 0 6px;
   color: #17133d;
   font-size: 16px;
@@ -896,25 +772,20 @@ body.menu-open {
 .eco-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.65;
 }
 
-/* Hover card */
 .eco-card:hover {
   color: inherit;
-
   transform: translateY(-4px);
-
   border-color: rgba(128, 117, 193, 0.35);
-
   box-shadow: 0 16px 36px rgba(67, 53, 140, 0.13);
 }
 
 .ecosystem-grid > .eco-card:hover > i {
   color: #ffffff;
   background: var(--primary);
-
   transform: scale(1.05);
 }
 
@@ -953,20 +824,16 @@ body.menu-open {
   background: #f2faec;
 }
 
-   /* ĐƯỜNG NỐI */
-
+/* ĐƯỜNG NỐI */
 .ecosystem-grid > .eco-card:nth-child(1)::after,
 .ecosystem-grid > .eco-card:nth-child(4)::after,
 .ecosystem-grid > .eco-card:nth-child(6)::after {
   content: "";
-
   position: absolute;
   top: 50%;
   right: -85px;
-
   width: 85px;
   height: 1px;
-
   background: repeating-linear-gradient(
     to right,
     #d3cff0 0,
@@ -974,7 +841,6 @@ body.menu-open {
     transparent 5px,
     transparent 10px
   );
-
   pointer-events: none;
 }
 
@@ -983,14 +849,11 @@ body.menu-open {
 .ecosystem-grid > .eco-card:nth-child(5)::after,
 .ecosystem-grid > .eco-card:nth-child(7)::after {
   content: "";
-
   position: absolute;
   top: 50%;
   left: -85px;
-
   width: 85px;
   height: 1px;
-
   background: repeating-linear-gradient(
     to right,
     #d3cff0 0,
@@ -998,17 +861,11 @@ body.menu-open {
     transparent 5px,
     transparent 10px
   );
-
   pointer-events: none;
 }
 
-/* ==================================================
-   VÒNG TRÒN MYSPA Ở GIỮA
-================================================== */
-
 .eco-center {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1036,58 +893,43 @@ body.menu-open {
   box-shadow: 43px 73px 55px rgba(91, 61, 245, 0.07);
 }
 
-/* Vòng trắng bên trong */
 .eco-circle::before {
   content: "";
-
   position: absolute;
   inset: 65px;
-
   background: #ffffff;
   border-radius: 50%;
-
   box-shadow: 0 8px 30px rgba(60, 45, 130, 0.08);
 }
 
-/* Logo */
 .eco-circle .brand {
   position: relative;
   z-index: 2;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 125px;
   margin: 0 0 12px;
 }
 
 .eco-circle .brand img {
   display: block;
-
   width: 100%;
   height: auto;
-
   object-fit: contain;
 }
 
-/* Nội dung trong vòng tròn */
 .eco-circle p {
+  font-family: var(--fontHeader);
   position: relative;
   z-index: 2;
-
   max-width: 155px;
   margin: 0;
-
-  color: #17133d;
+  color: var(--header);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.45;
 }
-
-/* ==================================================
-   NÚT PHÍA DƯỚI
-================================================== */
 
 .center-cta {
   margin-top: 26px;
@@ -1097,145 +939,11 @@ body.menu-open {
 .center-cta .btn {
   width: auto;
   padding: 11px 22px;
-
   color: var(--primary);
-
   border-radius: 999px;
 }
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-@media (max-width: 1200px) {
-  .ecosystem-grid {
-    grid-template-columns:
-      minmax(230px, 1fr)
-      290px
-      minmax(230px, 1fr);
-
-    column-gap: 45px;
-  }
-
-  .eco-circle {
-    width: 280px;
-    height: 280px;
-  }
-
-  .eco-circle::before {
-    inset: 58px;
-  }
-
-  /* Rút ngắn đường nối */
-  .ecosystem-grid > .eco-card:nth-child(1)::after,
-  .ecosystem-grid > .eco-card:nth-child(4)::after,
-  .ecosystem-grid > .eco-card:nth-child(6)::after {
-    right: -45px;
-    width: 45px;
-  }
-
-  .ecosystem-grid > .eco-card:nth-child(3)::after,
-  .ecosystem-grid > .eco-card:nth-child(5)::after,
-  .ecosystem-grid > .eco-card:nth-child(7)::after {
-    left: -45px;
-    width: 45px;
-  }
-}
-
-@media (max-width: 992px) {
-  .ecosystem-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-
-    gap: 18px;
-
-    width: 100%;
-    max-width: 650px;
-  }
-
-  /* Reset vị trí desktop */
-  .ecosystem-grid > .eco-card:nth-child(1),
-  .ecosystem-grid > .eco-center:nth-child(2),
-  .ecosystem-grid > .eco-card:nth-child(3),
-  .ecosystem-grid > .eco-card:nth-child(4),
-  .ecosystem-grid > .eco-card:nth-child(5),
-  .ecosystem-grid > .eco-card:nth-child(6),
-  .ecosystem-grid > .eco-card:nth-child(7),
-  .ecosystem-grid > .eco-card:nth-child(8) {
-    grid-column: 1;
-    grid-row: auto;
-    left: 0;
-  }
-
-  .eco-center {
-    order: -1;
-    margin-bottom: 10px;
-  }
-
-  .ecosystem-grid > .eco-card:nth-child(8) {
-    width: 100%;
-    max-width: none;
-  }
-
-  /* Ẩn đường nối trên tablet/mobile */
-  .eco-card::after,
-  .eco-center::after {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .ecosystem-section {
-    padding-top: 45px;
-    padding-bottom: 50px;
-  }
-
-  .ecosystem-section .section-head h2 {
-    font-size: 29px;
-  }
-
-  .ecosystem-section .section-head p {
-    font-size: 14px;
-  }
-
-  .eco-circle {
-    width: 250px;
-    height: 250px;
-  }
-
-  .eco-circle::before {
-    inset: 52px;
-  }
-
-  .eco-circle .brand {
-    width: 105px;
-  }
-
-  .eco-card {
-    grid-template-columns: 42px minmax(0, 1fr);
-
-    min-height: auto;
-    padding: 16px;
-  }
-
-  .eco-card > i {
-    width: 36px;
-    height: 36px;
-
-    font-size: 19px;
-  }
-
-  .eco-card h4 {
-    font-size: 14px;
-  }
-
-  .eco-card p {
-    font-size: 12px;
-  }
-}
-
 /* ================= PARTNER ================= */
-
 .partner-section {
   position: relative;
   overflow: hidden;
@@ -1252,7 +960,6 @@ body.menu-open {
 }
 
 /* Bên trái */
-
 .partner-left .badge {
   display: inline-flex;
   align-items: center;
@@ -1267,9 +974,10 @@ body.menu-open {
 }
 
 .partner-left h2 {
+  font-family: var(--fontHeader);
   max-width: 620px;
   margin: 0 0 18px;
-  font-size: 44px;
+  font-size: 38px;
   line-height: 1.2;
 }
 
@@ -1286,7 +994,6 @@ body.menu-open {
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
   gap: 10px;
-
   width: 100%;
   margin-top: 24px;
 }
@@ -1302,11 +1009,9 @@ body.menu-open {
 
 .logos img {
   display: block;
-
   width: auto;
   height: 35px;
   max-width: 100%;
-
   object-fit: contain;
 }
 
@@ -1373,52 +1078,6 @@ body.menu-open {
   font-size: 70px;
 }
 
-/* Responsive */
-
-@media (max-width: 992px) {
-  .partner-grid {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .partner-left {
-    text-align: center;
-  }
-
-  .partner-left h2,
-  .partner-left > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .logos {
-    justify-content: center;
-  }
-
-  .partner-right {
-    max-width: 760px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .partner-section {
-    padding: 45px 0;
-  }
-
-  .partner-left h2 {
-    font-size: 30px;
-  }
-
-  .partner-right {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-box {
-    min-height: 145px;
-  }
-}
-
 /* ================= SOLUTIONS ================= */
 .solutions-section {
   padding: 70px 0 70px;
@@ -1436,9 +1095,10 @@ body.menu-open {
 }
 
 .solutions-section .section-head h2 {
+  font-family: var(--fontHeader);
   margin: 10px 0 7px;
-  color: #17133d;
-  font-size: 44px;
+  color: var(--header);
+  font-size: 38px;
   line-height: 1.25;
 }
 
@@ -1542,35 +1202,6 @@ body.menu-open {
   transform: translateX(4px);
 }
 
-/* Responsive */
-
-@media (max-width: 1100px) {
-  .solutions-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
-  .solutions-section {
-    padding: 45px 0 55px;
-  }
-
-  .solutions-section .section-head h2 {
-    font-size: 29px;
-  }
-
-  .solutions-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .solution-body p {
-    min-height: auto;
-  }
-}
-
-/* ================= CTA ================= */
-
 .cta-section {
   padding-top: 0;
   padding-bottom: 65px;
@@ -1597,9 +1228,10 @@ body.menu-open {
 }
 
 .cta-content h2 {
+  font-family: var(--fontHeader);
   max-width: 540px;
   margin: 0 0 16px;
-  font-size: 39px;
+  font-size: 38px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1608,7 +1240,7 @@ body.menu-open {
   max-width: 500px;
   margin: 0 0 25px;
   color: rgba(255, 255, 255, 0.88);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -1684,93 +1316,6 @@ body.menu-open {
   object-fit: contain;
   transform: translateX(-50%);
   pointer-events: none;
-}
-
-/* Tablet */
-@media (max-width: 1100px) {
-  .cta-content h2 {
-    font-size: 34px;
-  }
-
-  .cta-card-left {
-    width: 225px;
-  }
-
-  .cta-card-right {
-    width: 165px;
-  }
-
-  .cta-woman {
-    top: -9%;
-    width: 226px;
-  }
-
-  .cta-visual {
-    min-height: 354px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 650px) {
-  .cta-banner {
-    padding: 32px 20px 0;
-  }
-
-  .cta-content h2 {
-    font-size: 29px;
-  }
-
-  .cta-actions {
-    flex-direction: column;
-  }
-
-  .cta-actions .btn {
-    width: 100%;
-  }
-
-  .cta-visual {
-    display: grid;
-    grid-template-columns: 1.25fr 0.85fr;
-    align-items: center;
-    gap: 12px;
-    min-height: auto;
-    padding-top: 25px;
-  }
-
-  .cta-card-image,
-  .cta-woman {
-    position: static;
-    width: 100%;
-    transform: none;
-  }
-
-  .cta-card-left {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .cta-card-right {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .cta-woman {
-    grid-column: 1 / 3;
-    grid-row: 2;
-    width: 230px;
-    margin: -25px auto 0;
-  }
-
-  .cta-card-image,
-  .cta-woman {
-    position: static;
-    width: 30%;
-    transform: none;
-  }
-
-  .cta-visual {
-    display: flex;
-  }
 }
 
 /* ================= INTEGRATIONS ================= */
@@ -1851,6 +1396,86 @@ i.bi.bi-x-lg {
 
   .integration-logos {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .ecosystem-grid {
+    grid-template-columns:
+      minmax(230px, 1fr)
+      290px
+      minmax(230px, 1fr);
+    column-gap: 45px;
+  }
+
+  .eco-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .eco-circle::before {
+    inset: 58px;
+  }
+
+  .ecosystem-grid > .eco-card:nth-child(1)::after,
+  .ecosystem-grid > .eco-card:nth-child(4)::after,
+  .ecosystem-grid > .eco-card:nth-child(6)::after {
+    right: -45px;
+    width: 45px;
+  }
+
+  .ecosystem-grid > .eco-card:nth-child(3)::after,
+  .ecosystem-grid > .eco-card:nth-child(5)::after,
+  .ecosystem-grid > .eco-card:nth-child(7)::after {
+    left: -45px;
+    width: 45px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .solutions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cta-content h2 {
+    font-size: 34px;
+  }
+
+  .cta-card-left {
+    width: 225px;
+  }
+
+  .cta-card-right {
+    width: 165px;
+  }
+
+  .cta-woman {
+    top: -9%;
+    width: 226px;
+  }
+
+  .cta-visual {
+    min-height: 354px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-inner {
+    min-height: 105px;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .header .logo img {
+    width: 190px;
+  }
+
+  .header .nav,
+  .header .header-actions {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
   }
 }
 
@@ -1937,6 +1562,68 @@ i.bi.bi-x-lg {
   .card-right {
     right: 10px;
   }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    gap: 18px;
+
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .ecosystem-grid > .eco-card:nth-child(1),
+  .ecosystem-grid > .eco-center:nth-child(2),
+  .ecosystem-grid > .eco-card:nth-child(3),
+  .ecosystem-grid > .eco-card:nth-child(4),
+  .ecosystem-grid > .eco-card:nth-child(5),
+  .ecosystem-grid > .eco-card:nth-child(6),
+  .ecosystem-grid > .eco-card:nth-child(7),
+  .ecosystem-grid > .eco-card:nth-child(8) {
+    grid-column: 1;
+    grid-row: auto;
+    left: 0;
+  }
+
+  .eco-center {
+    order: -1;
+    margin-bottom: 10px;
+  }
+
+  .ecosystem-grid > .eco-card:nth-child(8) {
+    width: 100%;
+    max-width: none;
+  }
+
+  .eco-card::after,
+  .eco-center::after {
+    display: none;
+  }
+
+  .partner-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .partner-left {
+    text-align: center;
+  }
+
+  .partner-left h2,
+  .partner-left > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logos {
+    justify-content: center;
+  }
+
+  .partner-right {
+    max-width: 760px;
+    margin: auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2011,12 +1698,68 @@ i.bi.bi-x-lg {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media (max-width: 650px) {
+  .cta-banner {
+    padding: 32px 20px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 29px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+  .cta-visual {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    align-items: center;
+    gap: 12px;
+    min-height: auto;
+    padding-top: 25px;
+  }
+
+  .cta-card-image,
+  .cta-woman {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+
+  .cta-card-left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .cta-card-right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .cta-woman {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    width: 230px;
+    margin: -25px auto 0;
+  }
+
+  .cta-card-image,
+  .cta-woman {
+    position: static;
+    width: 30%;
+    transform: none;
+  }
+
+  .cta-visual {
+    display: flex;
+  }
 }
-@media only screen and (max-width: 1279px) and (min-width: 1024px) {
-}
-@media only screen and (max-width: 1023px) {
-}
+
 @media only screen and (max-width: 640px) {
   .hero-features {
     display: flex;
@@ -2141,7 +1884,7 @@ i.bi.bi-x-lg {
     font-size: 16px;
   }
   .cta-banner {
-    padding: 20px;
+    padding: 20px 20px 0;
   }
   .integration-logos {
     justify-content: space-between;
@@ -2170,6 +1913,149 @@ i.bi.bi-x-lg {
     height: 40px;
   }
 }
+
+@media (max-width: 576px) {
+  .header-inner {
+    min-height: 82px;
+    justify-content: space-between;
+  }
+
+  .header .logo img {
+    width: 145px;
+  }
+
+  .mobile-menu-toggle {
+    gap: 5px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 6px;
+    height: 6px;
+  }
+
+  .mobile-menu {
+    padding: 24px 26px 40px;
+  }
+
+  .mobile-menu-top {
+    margin-bottom: 42px;
+  }
+
+  .mobile-logo img {
+    width: 165px;
+  }
+
+  .mobile-menu-close {
+    width: 42px;
+    height: 42px;
+    font-size: 30px;
+  }
+
+  .mobile-nav {
+    gap: 29px;
+  }
+
+  .mobile-nav > a,
+  .mobile-nav-dropdown summary {
+    font-size: 23px;
+  }
+
+  .mobile-submenu a {
+    font-size: 16px;
+  }
+
+  .mobile-auth-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mobile-login-btn,
+  .mobile-demo-btn {
+    width: 100%;
+  }
+
+  .ecosystem-section {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  .ecosystem-section .section-head h2 {
+    font-size: 29px;
+  }
+
+  .ecosystem-section .section-head p {
+    font-size: 14px;
+  }
+
+  .eco-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .eco-circle::before {
+    inset: 52px;
+  }
+
+  .eco-circle .brand {
+    width: 105px;
+  }
+
+  .eco-card {
+    grid-template-columns: 42px minmax(0, 1fr);
+
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .eco-card > i {
+    width: 36px;
+    height: 36px;
+
+    font-size: 19px;
+  }
+
+  .eco-card h4 {
+    font-size: 14px;
+  }
+
+  .eco-card p {
+    font-size: 12px;
+  }
+
+    .partner-section {
+    padding: 45px 0;
+  }
+
+  .partner-left h2 {
+    font-size: 30px;
+  }
+
+  .partner-right {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    min-height: 145px;
+  }
+
+    .solutions-section {
+    padding: 45px 0 55px;
+  }
+
+  .solutions-section .section-head h2 {
+    font-size: 29px;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .solution-body p {
+    min-height: auto;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .mini-stats,
   .bottom-grid,
@@ -2256,7 +2142,7 @@ i.bi.bi-x-lg {
   }
   .cta-banner,
   .stat-box {
-    padding: 15px;
+    padding: 15px 15px 0 15px;
   }
   .container {
     width: min(var(--container), calc(100% - 20px));
@@ -2313,7 +2199,7 @@ i.bi.bi-x-lg {
   }
   .cta-actions {
     gap: 15px;
-}
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -2355,6 +2241,7 @@ i.bi.bi-x-lg {
     font-size: 40px;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .partner-right {
     grid-template-columns: 1fr;
@@ -2365,3 +2252,4 @@ i.bi.bi-x-lg {
     grid-template-columns: 1fr;
   }
 }
+
