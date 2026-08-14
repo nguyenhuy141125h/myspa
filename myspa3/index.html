@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://myspa.vn/assets/frontend/images/favicon.png"
+    />
+    <title>Myspa</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#" class="logo">
+          <img src="public/image/logo.png" alt="Myspa Logo" />
+        </a>
+
+        <!-- Menu desktop hiện tại -->
+        <nav class="nav">
+          <div class="nav-item">
+            <a href="#" class="nav-link" data-vi="Sản phẩm" data-en="Products">
+              Sản phẩm
+
+              <img class="drop-down-icon" src="public/image/icon.svg" alt="" />
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="#">Phần mềm quản lý phòng khám</a>
+              <a href="#">Phần mềm quản lý salon tóc</a>
+              <a href="#">Phần mềm quản lý tiệm nails</a>
+              <a href="#">Thiết kế App thương hiệu</a>
+              <a href="#">Thiết kế Mini App thương hiệu</a>
+              <a href="#">Lucky Wheel</a>
+              <a href="#">Marketing Automation ZNS</a>
+              <a href="#">Mở gian hàng trên BeautyX</a>
+            </div>
+          </div>
+
+          <a href="#" class="nav-link">Giải pháp</a>
+          <a href="#" class="nav-link">Bảng giá</a>
+          <a href="#" class="nav-link">Khách hàng</a>
+          <a href="#" class="nav-link">Tài nguyên</a>
+          <a href="#" class="nav-link">Về chúng tôi</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#" class="login-btn">Đăng nhập</a>
+          <a href="#" class="btn btn-primary">Dùng thử miễn phí</a>
+        </div>
+
+        <!-- Chỉ hiện trên tablet/mobile -->
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          id="mobileMenuOpen"
+          aria-label="Mở menu"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-top">
+        <a href="#" class="mobile-logo">
+          <img src="public/image/logo.png" alt="Myspa Logo" />
+        </a>
+
+        <button
+          type="button"
+          class="mobile-menu-close"
+          id="mobileMenuClose"
+          aria-label="Đóng menu"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-nav">
+        <details class="mobile-nav-dropdown">
+          <summary>
+            <span>Sản phẩm</span>
+            <i class="bi bi-chevron-down"></i>
+          </summary>
+
+          <div class="mobile-submenu">
+            <a href="#">Phần mềm quản lý phòng khám</a>
+            <a href="#">Phần mềm quản lý salon tóc</a>
+            <a href="#">Phần mềm quản lý tiệm nails</a>
+            <a href="#">Thiết kế App thương hiệu</a>
+            <a href="#">Thiết kế Mini App thương hiệu</a>
+            <a href="#">Lucky Wheel</a>
+            <a href="#">Marketing Automation ZNS</a>
+            <a href="#">Mở gian hàng trên BeautyX</a>
+          </div>
+        </details>
+        <a href="#">Giải pháp</a>
+        <a href="#">Bảng giá</a>
+        <a href="#">Khách hàng</a>
+        <a href="#">Tài nguyên</a>
+        <a href="#">Về chúng tôi</a>
+        <div class="mobile-auth-actions">
+          <a href="#" class="mobile-login-btn"> Đăng nhập </a>
+
+          <a href="#" class="mobile-demo-btn">
+            Dùng thử miễn phí
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">VỀ CHÚNG TÔI</div>
+
+          <h1 class="hero-title">
+            Hạ tầng công nghệ nâng tầm
+            <span class="accent">ngành làm đẹp Việt Nam</span>
+          </h1>
+
+          <p class="hero-desc">
+            Myspa ra đời với một niềm tin: Công nghệ đúng cách sẽ giúp hàng
+            triệu doanh nghiệp làm đẹp Việt Nam vận hành tinh gọn hơn, hiếu
+            khách hơn và phát triển bền vững hơn.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary"
+              >Khám phá giải pháp <i class="bi bi-arrow-right"></i
+            ></a>
+            <a href="#" class="btn btn-outline"
+              >Liên hệ với chúng tôi <i class="bi bi-caret-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="public/image/dash.jpg"
+            alt="Giao diện quản lý Myspa"
+            class="dashboard-image"
+          />
+          <div class="hero-floating-note">
+            <div class="hero-note-icon">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+
+            <p>
+              <strong>Đồng hành cùng</strong><br />
+              hàng nghìn doanh nghiệp<br />
+              làm đẹp trên hành trình<br />
+              chuyển đổi và tăng trưởng.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MISSION ================= -->
+    <section class="about-mission">
+      <div class="container">
+        <div class="about-section-head">
+          <span class="badge">KIM CHỈ NAM</span>
+
+          <h2>Vì một ngành làm đẹp phát triển bền vững</h2>
+
+          <p>
+            Myspa kiến tạo hạ tầng công nghệ giúp doanh nghiệp làm đẹp vận hành
+            xuất sắc, kết nối thông minh và tăng trưởng bền vững trong thời đại
+            số.
+          </p>
+        </div>
+
+        <div class="mission-grid">
+          <!-- Sứ mệnh -->
+          <article class="mission-card">
+            <div class="mission-card-title">
+              <div class="mission-icon mission-purple">
+                <i class="bi bi-bullseye"></i>
+              </div>
+
+              <h3>Sứ mệnh</h3>
+            </div>
+
+            <p>
+              Đơn giản hóa công nghệ để giúp doanh nghiệp làm đẹp vận hành hiệu
+              quả, thấu hiểu khách hàng và tăng trưởng bền vững.
+            </p>
+          </article>
+
+          <!-- Tầm nhìn -->
+          <article class="mission-card">
+            <div class="mission-card-title">
+              <div class="mission-icon mission-purple">
+                <i class="bi bi-eye"></i>
+              </div>
+
+              <h3>Tầm nhìn</h3>
+            </div>
+
+            <p>
+              Trở thành nền tảng hạ tầng công nghệ hàng đầu cho Beauty –
+              Healthcare – Wellness tại Việt Nam và vươn tầm Đông Nam Á.
+            </p>
+          </article>
+
+          <!-- Giá trị cốt lõi -->
+          <article class="mission-card">
+            <div class="mission-card-title">
+              <div class="mission-icon mission-pink">
+                <i class="bi bi-heart"></i>
+              </div>
+
+              <h3>Giá trị cốt lõi</h3>
+            </div>
+
+            <ul>
+              <li>Khách hàng là trung tâm</li>
+              <li>Đổi mới không ngừng</li>
+              <li>Minh bạch & Tin cậy</li>
+              <li>Đồng hành & Chia sẻ</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JOURNEY ================= -->
+    <section class="journey-section">
+      <div class="container">
+        <div class="about-section-head">
+          <span class="badge">HÀNH TRÌNH MYSPA</span>
+
+          <h2>Hành trình kiến tạo hạ tầng cho ngành làm đẹp</h2>
+        </div>
+
+        <div class="journey-list">
+          <!-- 2018 -->
+          <article class="journey-item">
+            <div class="journey-icon journey-green">
+              <i class="bi bi-flower1"></i>
+            </div>
+
+            <span class="journey-year">2018</span>
+            <h3>Khởi đầu</h3>
+
+            <p>
+              Bắt đầu từ một phần mềm quản lý Spa đơn giản, với sứ mệnh giúp chủ
+              spa vận hành dễ dàng hơn.
+            </p>
+          </article>
+
+          <!-- 2019 -->
+          <article class="journey-item">
+            <div class="journey-icon">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+
+            <span class="journey-year">2019 – 2020</span>
+            <h3>Tăng trưởng</h3>
+
+            <p>
+              Hàng nghìn doanh nghiệp tin tưởng lựa chọn. Myspa không ngừng cải
+              tiến để phục vụ tốt hơn.
+            </p>
+          </article>
+
+          <!-- 2021 -->
+          <article class="journey-item">
+            <div class="journey-icon">
+              <i class="bi bi-boxes"></i>
+            </div>
+
+            <span class="journey-year">2021 – 2022</span>
+            <h3>Xây nền tảng +</h3>
+
+            <p>
+              Đầu tư mạnh mẽ cho công nghệ, chuẩn hóa quy trình và mở rộng hệ
+              sinh thái giải pháp.
+            </p>
+          </article>
+
+          <!-- 2023 -->
+          <article class="journey-item">
+            <div class="journey-icon">
+              <i class="bi bi-bezier2"></i>
+            </div>
+
+            <span class="journey-year">2023 – 2024</span>
+            <h3>Mở rộng hệ sinh thái</h3>
+
+            <p>
+              Kết nối nhiều giải pháp, đối tác hàng đầu để tạo nên một hệ sinh
+              thái toàn diện cho ngành làm đẹp.
+            </p>
+          </article>
+
+          <!-- 2025 -->
+          <article class="journey-item journey-highlight">
+            <div class="journey-icon">
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+
+            <span class="journey-year">2025+</span>
+            <h3>Hạ tầng ngành làm đẹp</h3>
+
+            <p>
+              Tiến tới trở thành hạ tầng công nghệ cốt lõi, nâng tầm ngành làm
+              đẹp Việt Nam và khu vực.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ECOSYSTEM ================= -->
+    <section class="section ecosystem-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="badge">MYSPA - BEAUTY BUSINESS INFRASTRUCTURE</div>
+          <h2>Không chỉ là phần mềm - Chúng tôi xây dựng hạ tầng</h2>
+        </div>
+
+        <div class="ecosystem-grid">
+          <a href="#" class="eco-card">
+            <i class="bi bi-person"></i>
+            <div class="eco-card-content">
+              <h4>Vận hành doanh nghiệp</h4>
+              <p>Quản lý toàn bộ hoạt động kinh doanh một cách tính gọn.</p>
+            </div>
+          </a>
+
+          <div class="eco-center">
+            <div class="eco-circle">
+              <div class="brand">
+                <img src="public/image/logo.png" alt="Myspa Logo" />
+              </div>
+
+              <p>Beauty Business Infrastructure</p>
+            </div>
+          </div>
+
+          <a href="#" class="eco-card">
+            <i class="fa-solid fa-shop"></i>
+            <div class="eco-card-content">
+              <h4>Marketing & Tăng trưởng</h4>
+              <p>Tự động hóa marketing. chăm sóc khách hàng đa kênh</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="fa-solid fa-user-pen"></i>
+            <div class="eco-card-content">
+              <h4>Hiểu khách hàng</h4>
+              <p>Lưu trữ, phân tích và cá nhân hóa trải nghiệm khách hàng.</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="fa-solid fa-spa"></i>
+
+            <div class="eco-card-content">
+              <h4>Dữ liệu & Thông tin</h4>
+              <p>
+                Dữ liệu tập trung, báo cáo thời gian thực, hổ trợ ra quyết định
+                thông minh.
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="bi bi-database"></i>
+
+            <div class="eco-card-content">
+              <h4>Thanh toán & Tài chính</h4>
+
+              <p>Kết nối thanh toán, quản lý doanh thu minh bạch, chính xác.</p>
+            </div>
+          </a>
+
+          <a href="#" class="eco-card">
+            <i class="fa-solid fa-laptop"></i>
+
+            <div class="eco-card-content">
+              <h4>Công nghệ & Kết nối</h4>
+
+              <p>API mở tích hợp đa nền tảng. liên kết hệ sinh thái</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TEAM ================= -->
+    <section class="team-section">
+      <div class="container">
+        <div class="about-section-head">
+          <span class="badge">CON NGƯỜI MYSPA</span>
+
+          <h2>Đội ngũ tận tâm &amp; giàu kinh nghiệm</h2>
+
+          <p>
+            Những con người đam mê công nghệ và ngành làm đẹp,<br />
+            luôn nỗ lực mỗi ngày để tạo ra giá trị bền vững.
+          </p>
+        </div>
+
+        <div class="team-wrapper">
+          <button class="team-arrow team-arrow-left" type="button">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="team-image">
+                <img src="public/image/avatar1.png" alt="Nghiêm Xuân Hiệp" />
+              </div>
+
+              <h3>Nghiêm Xuân Hiệp</h3>
+              <p>CEO &amp; Founder</p>
+
+              <a href="#" class="team-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </article>
+
+            <article class="team-card">
+              <div class="team-image">
+                <img src="public/image/avatar2.png" alt="Đoàn Tuấn" />
+              </div>
+
+              <h3>Đoàn Tuấn</h3>
+              <p>CFO</p>
+
+              <a href="#" class="team-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </article>
+
+            <article class="team-card">
+              <div class="team-image">
+                <img src="public/image/avatar4.png" alt="Glen Ramos" />
+              </div>
+
+              <h3>Glen Ramos</h3>
+              <p>COO</p>
+
+              <a href="#" class="team-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </article>
+
+            <article class="team-card">
+              <div class="team-image">
+                <img src="public/image/avatar3.png" alt="Phạm Xuân Nguyên" />
+              </div>
+
+              <h3>Phạm Xuân Nguyện</h3>
+              <p>Head of Operations</p>
+
+              <a href="#" class="team-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </article>
+
+            <article class="team-card">
+              <div class="team-image">
+                <img src="public/image/avatar5.png" alt="Hằng Nguyễn" />
+              </div>
+
+              <h3>Hằng Nguyễn</h3>
+              <p>Head of Marketing</p>
+
+              <a href="#" class="team-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </article>
+          </div>
+
+          <button class="team-arrow team-arrow-right" type="button">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="about-cta-section">
+      <div class="container">
+        <div class="about-cta">
+          <div class="about-cta-content">
+            <h2>
+              Cùng Myspa kiến tạo tương lai<br />
+              ngành làm đẹp Việt Nam
+            </h2>
+
+            <p>
+              Chúng tôi tin rằng khi doanh nghiệp làm đẹp Việt Nam lớn mạnh,<br />
+              khách hàng sẽ hạnh phúc hơn và ngành làm đẹp sẽ phát triển bền
+              vững.
+            </p>
+
+            <div class="about-cta-actions">
+              <a href="#" class="btn-primary btn">
+                Đăng ký miễn phí
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+              <a href="#" class="btn-outline btn"> Liên hệ tư vấn </a>
+            </div>
+          </div>
+
+          <div class="about-cta-art">
+            <div class="cta-glow"></div>
+
+            <div class="cta-symbol">
+              <img src="public/image/cta.png" alt="ảnh cat">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        © 2026 Myspa. Giao diện landing page dựng bằng HTML & CSS.
+      </div>
+    </footer>
+    <script>
+      const mobileMenu = document.getElementById("mobileMenu");
+      const openMenuButton = document.getElementById("mobileMenuOpen");
+      const closeMenuButton = document.getElementById("mobileMenuClose");
+
+      function openMobileMenu() {
+        mobileMenu.classList.add("active");
+        document.body.classList.add("menu-open");
+        openMenuButton.setAttribute("aria-expanded", "true");
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        openMenuButton.setAttribute("aria-expanded", "false");
+      }
+
+      openMenuButton.addEventListener("click", openMobileMenu);
+      closeMenuButton.addEventListener("click", closeMobileMenu);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 1024) {
+          closeMobileMenu();
+        }
+      });
+
+      const teamGrid = document.querySelector(".team-grid");
+      const teamPrev = document.querySelector(".team-arrow-left");
+      const teamNext = document.querySelector(".team-arrow-right");
+
+      let teamAnimating = false;
+
+      function getTeamGap() {
+        return parseFloat(getComputedStyle(teamGrid).gap) || 0;
+      }
+
+      function getTeamMoveWidth() {
+        const card = teamGrid.querySelector(".team-card");
+        if (!card) return 0;
+        return card.offsetWidth + getTeamGap();
+      }
+
+      teamNext.addEventListener("click", function () {
+        if (teamAnimating) return;
+
+        teamAnimating = true;
+
+        const moveWidth = getTeamMoveWidth();
+
+        teamGrid.scrollBy({
+          left: moveWidth,
+          behavior: "smooth",
+        });
+
+        setTimeout(() => {
+          const firstCard = teamGrid.querySelector(".team-card");
+          teamGrid.appendChild(firstCard);
+          teamGrid.style.scrollBehavior = "auto";
+          teamGrid.scrollLeft = 0;
+          requestAnimationFrame(() => {
+            teamGrid.style.scrollBehavior = "smooth";
+            teamAnimating = false;
+          });
+        }, 350);
+      });
+
+      /* ================= PREVIOUS ================= */
+
+      teamPrev.addEventListener("click", function () {
+        if (teamAnimating) return;
+        teamAnimating = true;
+        const moveWidth = getTeamMoveWidth();
+        const lastCard = teamGrid.querySelector(".team-card:last-child");
+
+        /* đưa người cuối lên đầu */
+        teamGrid.prepend(lastCard);
+
+        /* đặt vị trí ngay trước card vừa thêm */
+        teamGrid.style.scrollBehavior = "auto";
+        teamGrid.scrollLeft = moveWidth;
+        requestAnimationFrame(() => {
+          teamGrid.style.scrollBehavior = "smooth";
+
+          teamGrid.scrollTo({
+            left: 0,
+            behavior: "smooth",
+          });
+        });
+
+        setTimeout(() => {
+          teamAnimating = false;
+        }, 350);
+      });
+    </script>
+  </body>
+</html>
