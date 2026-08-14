@@ -154,7 +154,7 @@ img {
   padding: 25px 5px;
   color: var(--header);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -178,6 +178,13 @@ img {
 
 .nav-link:hover::after {
   width: 65%;
+}
+
+.login-btn {
+  background: #fff;
+  border: 2px solid var(--border);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .login-btn:hover {
@@ -481,13 +488,6 @@ button#mobileMenuOpen i {
 
 .lang:hover {
   color: var(--secondary);
-}
-
-.login-btn {
-  background: #fff;
-  border: 2px solid var(--border);
-  font-size: 16px;
-  font-weight: 500;
 }
 
 /* HERO */
