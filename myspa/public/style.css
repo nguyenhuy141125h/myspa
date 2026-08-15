@@ -348,6 +348,11 @@ body.menu-open {
   box-shadow: 0 8px 20px rgba(91, 61, 245, 0.2);
 }
 
+button#mobileMenuOpen i {
+    color: #7f75bf;
+    font-size: 25px;
+}
+
 .mobile-login-btn:hover {
   color: #78bd28;
   border-color: #78bd28;
