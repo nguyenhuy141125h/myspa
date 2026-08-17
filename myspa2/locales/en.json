@@ -1,0 +1,193 @@
+{
+  "header": {
+    "products": "Products",
+    "dropdown": {
+      "clinic": "Clinic Management Software",
+      "salon": "Hair Salon Management Software",
+      "nails": "Nail Salon Management Software",
+      "brandedApp": "Branded App Design",
+      "miniApp": "Branded Mini App Design",
+      "beautyx": "Open a Store on BeautyX"
+    },
+    "solutions": "Solutions",
+    "customers": "Customers",
+    "resources": "Resources",
+    "about": "About Us",
+    "pricing": "Pricing",
+    "login": "Log in",
+    "home": "Home"
+  },
+  "common": {
+    "bookDemo": "Book a demo",
+    "learnMore": "Learn more",
+    "exploreAll": "Explore all features",
+    "qty": "Qty",
+    "total": "Total",
+    "status": "Status",
+    "inStock": "In stock",
+    "lowStock": "Low stock",
+    "revenue": "Revenue"
+  },
+  "hero": {
+    "badge": "+ MYSPA PRODUCTS",
+    "title": "Everything you need. One",
+    "accent": "powerful platform.",
+    "description": "From attracting new customers to delivering exceptional experiences and driving growth – Myspa provides a complete suite of tools for modern beauty businesses.",
+    "explore": "Explore all features",
+    "features": {
+      "unified": {
+        "title": "Unified platform",
+        "description": "All-in-one solution"
+      },
+      "sync": {
+        "title": "Real-time sync",
+        "description": "Always up to date"
+      },
+      "security": {
+        "title": "Secure & reliable",
+        "description": "Enterprise-grade security"
+      },
+      "scalable": {
+        "title": "Scalable",
+        "description": "Built for growth"
+      }
+    }
+  },
+  "modules": {
+    "badge": "POWERFUL MODULES",
+    "title": "All the tools to manage, operate and grow your beauty business",
+    "description": "Designed for beauty businesses. Built to scale with you.",
+    "crm": {
+      "title": "CRM & Customers",
+      "description": "Manage and retain more customers.",
+      "preview": {
+        "vipCustomer": "VIP Customer",
+        "returningCustomer": "Returning Customer",
+        "returning": "Returning",
+        "newCustomer": "New Customer",
+        "new": "New"
+      },
+      "feature1": "Customer profiles & history",
+      "feature2": "Segmentation & tagging",
+      "feature3": "Notes & preferences"
+    },
+    "booking": {
+      "title": "Booking & Scheduling",
+      "description": "Manage appointments and save time.",
+      "preview": {
+        "month": "Aug 2026",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "hairWash": "Hair Wash"
+      },
+      "feature1": "Online booking",
+      "feature2": "Resource & room management",
+      "feature3": "Reminders & confirmations"
+    },
+    "pos": {
+      "title": "POS & Sales",
+      "description": "Optimize revenue at every touchpoint.",
+      "preview": {
+        "amount": "Amount"
+      },
+      "feature1": "Fast checkout",
+      "feature2": "Multiple payment methods",
+      "feature3": "Receipts & invoices"
+    },
+    "loyalty": {
+      "title": "Loyalty & Membership",
+      "description": "Build long-term loyalty and increase repeat visits.",
+      "preview": {
+        "points": "2,250 points",
+        "memberSince": "Member since"
+      },
+      "feature1": "Points & tier programs",
+      "feature2": "Membership cards",
+      "feature3": "Vouchers & rewards"
+    },
+    "marketing": {
+      "title": "Marketing Automation",
+      "description": "Run targeted campaigns that bring customers back.",
+      "preview": {
+        "summer": "Summer Skin Care",
+        "sent": "Sent",
+        "birthday": "VIP Birthday Offer",
+        "scheduled": "Scheduled",
+        "reengagement": "Re-engagement",
+        "draft": "Draft"
+      },
+      "feature1": "Campaign builder",
+      "feature3": "Performance tracking"
+    },
+    "inventory": {
+      "title": "Inventory & Supplies",
+      "description": "Track inventory in real-time and never run out of essentials.",
+      "preview": {
+        "massageOil": "Massage Oil",
+        "towel": "Towel"
+      },
+      "feature1": "Stock tracking",
+      "feature2": "Low-stock alerts",
+      "feature3": "Purchase management"
+    },
+    "analytics": {
+      "title": "Analytics & Reports",
+      "description": "Make data-driven decisions with powerful insights.",
+      "preview": {
+        "revenue": "Revenue this month",
+        "growth": "12% vs last month"
+      },
+      "feature1": "Real-time dashboards",
+      "feature2": "Custom reports",
+      "feature3": "Export & share"
+    },
+    "staff": {
+      "title": "Staff & Performance",
+      "description": "Empower your team and improve performance.",
+      "preview": {
+        "staff": "Staff"
+      },
+      "feature1": "Commission & incentives",
+      "feature2": "Performance analytics",
+      "feature3": "Team management"
+    }
+  },
+  "ai": {
+    "badge": "+ AI-POWERED",
+    "title": "AI that helps you grow smarter",
+    "description": "Leverage the power of AI to automate tasks, understand customer behavior and increase revenue.",
+    "button": "Discover AI features",
+    "upsell": {
+      "title": "AI Upsell",
+      "description": "Recommend the right services & products."
+    },
+    "insights": {
+      "title": "AI Customer Insights",
+      "description": "Understand behavior and preferences."
+    },
+    "campaigns": {
+      "title": "AI Smart Campaigns",
+      "description": "Auto-generate campaigns that convert."
+    },
+    "forecasting": {
+      "title": "AI Forecasting",
+      "description": "Predict demand and optimize resources."
+    }
+  },
+  "integrations": {
+    "badge": "SEAMLESS INTEGRATIONS",
+    "title": "Connect with the tools you already use"
+  },
+  "cta": {
+    "title": "Ready to transform your beauty business?",
+    "description": "Join thousands of beauty businesses using Myspa to operate efficiently and grow sustainably.",
+    "bookDemo": "Book a demo – It’s free",
+    "expert": "Talk to an expert"
+  },
+  "footer": {
+    "copyright": "© 2026 Myspa. Landing page interface built with HTML & CSS."
+  }
+}

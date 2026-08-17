@@ -1,330 +1,400 @@
 <!doctype html>
+
 <html lang="vi">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="public/reset.css" />
-    <link rel="stylesheet" href="public/style.css" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="public/style.css" rel="stylesheet" />
+    <link href="public/reset.css" rel="stylesheet" />
     <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
     <link
+      href="https://myspa.vn/assets/frontend/images/favicon.png"
       rel="icon"
       type="image/png"
-      href="https://myspa.vn/assets/frontend/images/favicon.png"
     />
     <title>Myspa</title>
+    <link href="public/i18n-selected.css" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
       <div class="container header-inner">
-        <a href="#" class="logo">
-          <img src="public/image/logo.png" alt="Myspa Logo" />
+        <a class="logo" href="#">
+          <img alt="Myspa Logo" src="public/image/logo.png" />
         </a>
-
         <nav class="nav">
           <div class="nav-item">
-            <a href="#" class="nav-link">
-              Sản phẩm
-
-              <img class="drop-down-icon" src="public/image/icon.svg" alt="" />
+            <a class="nav-link" href="#"
+              ><span data-i18n="header.products">Sản phẩm</span
+              ><img alt="" class="drop-down-icon" src="public/image/icon.svg" />
             </a>
-
             <div class="dropdown-menu">
-              <a href="#">Phần mềm quản lý phòng khám</a>
-              <a href="#">Phần mềm quản lý salon tóc</a>
-              <a href="#">Phần mềm quản lý tiệm nails</a>
-              <a href="#">Thiết kế App thương hiệu</a>
-              <a href="#">Thiết kế Mini App thương hiệu</a>
+              <a data-i18n="header.dropdown.clinic" href="#"
+                >Phần mềm quản lý phòng khám</a
+              >
+              <a data-i18n="header.dropdown.salon" href="#"
+                >Phần mềm quản lý salon tóc</a
+              >
+              <a data-i18n="header.dropdown.nails" href="#"
+                >Phần mềm quản lý tiệm nails</a
+              >
+              <a data-i18n="header.dropdown.brandedApp" href="#"
+                >Thiết kế App thương hiệu</a
+              >
+              <a data-i18n="header.dropdown.miniApp" href="#"
+                >Thiết kế Mini App thương hiệu</a
+              >
               <a href="#">Lucky Wheel</a>
               <a href="#">Marketing Automation ZNS</a>
-              <a href="#">Mở gian hàng trên BeautyX</a>
+              <a data-i18n="header.dropdown.beautyx" href="#"
+                >Mở gian hàng trên BeautyX</a
+              >
             </div>
           </div>
-
-          <a href="#" class="nav-link">Giải pháp</a>
-          <a href="#" class="nav-link">Khách hàng</a>
-          <a href="#" class="nav-link">Tài nguyên</a>
-          <a href="#" class="nav-link">Về chúng tôi</a>
-          <a href="#" class="nav-link">Bảng giá</a>
+          <a class="nav-link" data-i18n="header.solutions" href="#"
+            >Giải pháp</a
+          >
+          <a class="nav-link" data-i18n="header.customers" href="#"
+            >Khách hàng</a
+          >
+          <a class="nav-link" data-i18n="header.resources" href="#"
+            >Tài nguyên</a
+          >
+          <a class="nav-link" data-i18n="header.about" href="#">Về chúng tôi</a>
+          <a class="nav-link" data-i18n="header.pricing" href="#">Bảng giá</a>
         </nav>
-
         <div class="header-actions">
           <div class="nav-item">
-            <a href="#" class="lang nav-link"
-              >VI
-              <img class="drop-down-icon" src="public/image/icon.svg" alt=""
+            <a class="lang nav-link" href="#"
+              ><i class="bi bi-globe"></i><span id="currentLanguage">VI</span
+              ><img alt="" class="drop-down-icon" src="public/image/icon.svg"
             /></a>
             <div class="dropdown-menu vi">
-              <a href="#">VI</a>
-              <a href="#">EN</a>
+              <button
+                data-lang="vi"
+                onclick="changeLanguage('vi')"
+                type="button"
+              >
+                VI
+              </button>
+              <button
+                data-lang="en"
+                onclick="changeLanguage('en')"
+                type="button"
+              >
+                EN
+              </button>
             </div>
           </div>
-          <a href="#" class="login-btn">Đăng nhập</a>
-          <a href="#" class="btn btn-primary">Đặt lịch demo</a>
+          <a class="login-btn" data-i18n="header.login" href="#">Đăng nhập</a>
+          <a class="btn btn-primary" data-i18n="common.bookDemo" href="#"
+            >Đặt lịch demo</a
+          >
         </div>
-
+        <!-- Chỉ hiện trên tablet/mobile -->
         <button
-          type="button"
+          aria-expanded="false"
+          aria-label="Mở menu"
           class="mobile-menu-toggle"
           id="mobileMenuOpen"
-          aria-label="Mở menu"
-          aria-expanded="false"
+          type="button"
         >
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </header>
-
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu-top">
-        <a href="#" class="mobile-logo">
-          <img src="public/image/logo.png" alt="Myspa Logo" />
+        <a class="mobile-logo" href="#">
+          <img alt="Myspa Logo" src="public/image/logo.png" />
         </a>
-
         <button
-          type="button"
+          aria-label="Đóng menu"
           class="mobile-menu-close"
           id="mobileMenuClose"
-          aria-label="Đóng menu"
+          type="button"
         >
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
-
       <nav class="mobile-nav">
         <details class="mobile-nav-dropdown">
           <summary>
-            <span>Trang chủ</span>
+            <span data-i18n="header.home">Trang chủ</span>
             <i class="bi bi-chevron-down"></i>
           </summary>
-
           <div class="mobile-submenu">
-            <a href="#">Phần mềm quản lý phòng khám</a>
-            <a href="#">Phần mềm quản lý salon tóc</a>
-            <a href="#">Phần mềm quản lý tiệm nails</a>
-            <a href="#">Thiết kế App thương hiệu</a>
-            <a href="#">Thiết kế Mini App thương hiệu</a>
+            <a data-i18n="header.dropdown.clinic" href="#"
+              >Phần mềm quản lý phòng khám</a
+            >
+            <a data-i18n="header.dropdown.salon" href="#"
+              >Phần mềm quản lý salon tóc</a
+            >
+            <a data-i18n="header.dropdown.nails" href="#"
+              >Phần mềm quản lý tiệm nails</a
+            >
+            <a data-i18n="header.dropdown.brandedApp" href="#"
+              >Thiết kế App thương hiệu</a
+            >
+            <a data-i18n="header.dropdown.miniApp" href="#"
+              >Thiết kế Mini App thương hiệu</a
+            >
             <a href="#">Lucky Wheel</a>
             <a href="#">Marketing Automation ZNS</a>
-            <a href="#">Mở gian hàng trên BeautyX</a>
+            <a data-i18n="header.dropdown.beautyx" href="#"
+              >Mở gian hàng trên BeautyX</a
+            >
           </div>
         </details>
-        <a href="#">Giải pháp</a>
-        <a href="#">Khách hàng</a>
-        <a href="#">Tài nguyên</a>
-        <a href="#">Về chúng tôi</a>
-        <a href="#">Bảng giá</a>
+        <a data-i18n="header.solutions" href="#">Giải pháp</a>
+        <a data-i18n="header.customers" href="#">Khách hàng</a>
+        <a data-i18n="header.resources" href="#">Tài nguyên</a>
+        <a data-i18n="header.about" href="#">Về chúng tôi</a>
+        <a data-i18n="header.pricing" href="#">Bảng giá</a>
         <details class="mobile-nav-dropdown">
           <summary>
-            <span>VI</span>
+            <span id="mobileCurrentLanguage">VI</span>
             <i class="bi bi-chevron-down"></i>
           </summary>
-
           <div class="mobile-submenu">
-            <a href="#">VI</a>
-            <a href="#">EN</a>
+            <a
+              data-lang="vi"
+              href="#"
+              onclick="
+                changeLanguage('vi');
+                return false;
+              "
+              >VI</a
+            >
+            <a
+              data-lang="en"
+              href="#"
+              onclick="
+                changeLanguage('en');
+                return false;
+              "
+              >EN</a
+            >
           </div>
         </details>
         <div class="mobile-auth-actions">
-          <a href="#" class="mobile-login-btn"> Đăng nhập </a>
-
-          <a href="#" class="mobile-demo-btn">
-            Đặt lịch demo
-            <i class="bi bi-arrow-right"></i>
+          <a class="mobile-login-btn" data-i18n="header.login" href="#">
+            Đăng nhập
+          </a>
+          <a class="mobile-demo-btn" href="#"
+            ><span data-i18n="common.bookDemo">Đặt lịch demo</span
+            ><i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </nav>
     </div>
-
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="badge">+ SẢN PHẨM MYSPA</div>
-
+          <div class="badge" data-i18n="hero.badge">+ SẢN PHẨM MYSPA</div>
           <h1 class="hero-title">
-            Mọi thứ bạn cần. Tất cả trên một
-            <span class="accent">nền tảng mạnh mẽ.</span>
+            <span data-i18n="hero.title">Mọi thứ bạn cần. Tất cả trên một</span
+            > <span class="accent" data-i18n="hero.accent"
+              >nền tảng mạnh mẽ.</span
+            >
           </h1>
-
-          <p class="hero-desc">
+          <p class="hero-desc" data-i18n="hero.description">
             Từ việc thu hút khách hàng mới đến mang lại những trải nghiệm tuyệt
             vời và thúc đẩy tăng trưởng – Myspa cung cấp một bộ công cụ hoàn
             chỉnh dành cho các doanh nghiệp làm đẹp hiện đại.
           </p>
-
           <div class="hero-actions">
-            <a href="#" class="btn btn-primary"
-              >Đặt lịch demo <i class="bi bi-arrow-right"></i
+            <a class="btn btn-primary" href="#"
+              ><span data-i18n="common.bookDemo">Đặt lịch demo</span
+              ><i class="bi bi-arrow-right"></i
             ></a>
-            <a href="#" class="btn btn-outline"
-              >Khám phá nền tảng <i class="bi bi-caret-right"></i
+            <a class="btn btn-outline" href="#"
+              ><span data-i18n="hero.explore">Khám phá nền tảng</span
+              ><i class="bi bi-caret-right"></i
             ></a>
           </div>
-
           <div class="hero-features">
             <div class="hero-feature-item">
               <i class="bi bi-cloud-check"></i>
-
-              <div class="hero-feature-content">
-                <strong>Nền tảng hợp nhất <br /> </strong>
-                <p>Giải pháp toàn diện</p>
-              </div>
-            </div>
-
-            <div class="hero-feature-item">
-              <i class="bi bi-shield-check"></i>
-
-              <div class="hero-feature-content">
-                <strong>Đồng bộ<br /> </strong>
-                <p>Luôn cập nhật</p>
-              </div>
-            </div>
-
-            <div class="hero-feature-item">
-              <i class="bi bi-headset"></i>
-
-              <div class="hero-feature-content">
-                <strong>An toàn & tin cậy<br /> </strong>
-                <p>Bảo mật tốt</p>
-              </div>
-            </div>
-
-            <div class="hero-feature-item">
-              <i class="bi bi-buildings"></i>
-
               <div class="hero-feature-content">
                 <strong
-                  >Mở rộng
-                  <br />
+                  ><span data-i18n="hero.features.unified.title"
+                    >Nền tảng hợp nhất</span
+                  ><br />
                 </strong>
-                <p>Luôn phát triển</p>
+                <p data-i18n="hero.features.unified.description">
+                  Giải pháp toàn diện
+                </p>
+              </div>
+            </div>
+            <div class="hero-feature-item">
+              <i class="bi bi-shield-check"></i>
+              <div class="hero-feature-content">
+                <strong
+                  ><span data-i18n="hero.features.sync.title">Đồng bộ</span
+                  ><br />
+                </strong>
+                <p data-i18n="hero.features.sync.description">Luôn cập nhật</p>
+              </div>
+            </div>
+            <div class="hero-feature-item">
+              <i class="bi bi-headset"></i>
+              <div class="hero-feature-content">
+                <strong
+                  ><span data-i18n="hero.features.security.title"
+                    >An toàn &amp; tin cậy</span
+                  ><br />
+                </strong>
+                <p data-i18n="hero.features.security.description">
+                  Bảo mật tốt
+                </p>
+              </div>
+            </div>
+            <div class="hero-feature-item">
+              <i class="bi bi-buildings"></i>
+              <div class="hero-feature-content">
+                <strong
+                  ><span data-i18n="hero.features.scalable.title">Mở rộng</span
+                  ><br />
+                </strong>
+                <p data-i18n="hero.features.scalable.description">
+                  Luôn phát triển
+                </p>
               </div>
             </div>
           </div>
         </div>
-
         <div class="hero-visual">
           <img
-            src="public/image/dash.png"
             alt="Giao diện quản lý Myspa"
             class="dashboard-image"
+            src="public/image/dash.png"
           />
         </div>
       </div>
     </section>
-
+    <!-- MODULE -->
     <section class="modules-section">
       <div class="container">
         <div class="modules-head">
-          <span class="badge"> CÁC TÍNH NĂNG MẠNH MẼ </span>
-
-          <h2>
+          <span class="badge" data-i18n="modules.badge">
+            CÁC TÍNH NĂNG MẠNH MẼ
+          </span>
+          <h2 data-i18n="modules.title">
             Tất cả công cụ để quản lý, vận hành và phát triển doanh nghiệp làm
             đẹp
           </h2>
-
-          <p>
+          <p data-i18n="modules.description">
             Được thiết kế dành riêng cho doanh nghiệp làm đẹp. Sẵn sàng đồng
             hành cùng bạn khi mở rộng quy mô.
           </p>
         </div>
-
         <div class="modules-grid">
-
           <article class="module-card">
             <!-- Header card -->
             <div class="module-card-head">
               <div class="module-icon module-icon-green">
                 <i class="bi bi-person"></i>
               </div>
-
               <div>
-                <h3>CRM & Khách hàng</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.crm.title">CRM &amp; Khách hàng</h3>
+                <p class="module-subtext" data-i18n="modules.crm.description">
                   Quản lý và xây dựng mối quan hệ lâu dài với khách hàng.
                 </p>
               </div>
             </div>
-
             <div class="module-preview person-table">
               <div class="person-row">
                 <span class="person-avatar">
                   <i class="bi bi-person-fill"></i>
                 </span>
-
                 <div class="person-info">
                   <strong>Nguyễn Minh Anh</strong>
-                  <small>Khách hàng VIP</small>
+                  <small data-i18n="modules.crm.preview.vipCustomer"
+                    >Khách hàng VIP</small
+                  >
                 </div>
-
                 <span class="preview-badge badge-success"> VIP </span>
-
                 <strong class="person-value"> 3.380.000đ </strong>
               </div>
-
               <div class="person-row">
                 <span class="person-avatar avatar-green">
                   <i class="bi bi-person-fill"></i>
                 </span>
-
                 <div class="person-info">
                   <strong>Trần Mỹ Linh</strong>
-                  <small>Khách quay lại</small>
+                  <small data-i18n="modules.crm.preview.returningCustomer"
+                    >Khách quay lại</small
+                  >
                 </div>
-
-                <span class="preview-badge badge-purple"> Quay lại </span>
-
+                <span
+                  class="preview-badge badge-purple"
+                  data-i18n="modules.crm.preview.returning"
+                >
+                  Quay lại
+                </span>
                 <strong class="person-value"> 2.750.000đ </strong>
               </div>
-
               <div class="person-row">
                 <span class="person-avatar avatar-orange">
                   <i class="bi bi-person-fill"></i>
                 </span>
-
                 <div class="person-info">
                   <strong>Lê Ngọc Mai</strong>
-                  <small>Khách hàng mới</small>
+                  <small data-i18n="modules.crm.preview.newCustomer"
+                    >Khách hàng mới</small
+                  >
                 </div>
-
-                <span class="preview-badge badge-blue"> Khách mới </span>
-
+                <span
+                  class="preview-badge badge-blue"
+                  data-i18n="modules.crm.preview.new"
+                >
+                  Khách mới
+                </span>
                 <strong class="person-value"> 1.980.000đ </strong>
               </div>
             </div>
-
             <ul class="module-list">
-              <li>Hồ sơ & lịch sử khách hàng</li>
-              <li><i class="bi bi-dot"></i>Phân nhóm & gắn thẻ</li>
-              <li><i class="bi bi-dot"></i>Ghi chú & sở thích</li>
+              <li data-i18n="modules.crm.feature1">
+                Hồ sơ &amp; lịch sử khách hàng
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.crm.feature2"
+                  >Phân nhóm &amp; gắn thẻ</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.crm.feature3"
+                  >Ghi chú &amp; sở thích</span
+                >
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
           <article class="module-card">
@@ -332,31 +402,36 @@
               <div class="module-icon module-icon-purple">
                 <i class="bi bi-calendar-event"></i>
               </div>
-
               <div>
-                <h3>Đặt lịch & Lịch hẹn</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.booking.title">
+                  Đặt lịch &amp; Lịch hẹn
+                </h3>
+                <p
+                  class="module-subtext"
+                  data-i18n="modules.booking.description"
+                >
                   Quản lý lịch hẹn nhanh chóng và tiết kiệm thời gian.
                 </p>
               </div>
             </div>
-
             <div class="module-preview booking-calendar">
               <div class="calendar-head">
                 <button type="button">
                   <i class="bi bi-chevron-left"></i>
                 </button>
-                <strong>Tháng 8 / 2026</strong>
+                <strong data-i18n="modules.booking.preview.month"
+                  >Tháng 8 / 2026</strong
+                >
                 <button type="button">
                   <i class="bi bi-chevron-right"></i>
                 </button>
               </div>
               <div class="calendar-days">
-                <span>T2</span>
-                <span>T3</span>
-                <span>T4</span>
-                <span>T5</span>
-                <span>T6</span>
+                <span data-i18n="modules.booking.preview.mon">T2</span>
+                <span data-i18n="modules.booking.preview.tue">T3</span>
+                <span data-i18n="modules.booking.preview.wed">T4</span>
+                <span data-i18n="modules.booking.preview.thu">T5</span>
+                <span data-i18n="modules.booking.preview.fri">T6</span>
               </div>
               <div class="calendar-body">
                 <div class="calendar-column">
@@ -376,7 +451,12 @@
                 </div>
                 <div class="calendar-column">
                   <span class="calendar-time">13:00</span>
-                  <div class="appointment appointment-green">Gội đầu</div>
+                  <div
+                    class="appointment appointment-green"
+                    data-i18n="modules.booking.preview.hairWash"
+                  >
+                    Gội đầu
+                  </div>
                   <div></div>
                 </div>
                 <div class="calendar-column">
@@ -387,37 +467,43 @@
               </div>
             </div>
             <ul class="module-list">
-              <li>Đặt lịch trực tuyến</li>
-              <li><i class="bi bi-dot"></i>Quản lý phòng & nguồn lực</li>
-              <li><i class="bi bi-dot"></i>Nhắc lịch & xác nhận lịch hẹn</li>
+              <li data-i18n="modules.booking.feature1">Đặt lịch trực tuyến</li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.booking.feature2"
+                  >Quản lý phòng &amp; nguồn lực</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.booking.feature3"
+                  >Nhắc lịch &amp; xác nhận lịch hẹn</span
+                >
+              </li>
             </ul>
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
-
           <article class="module-card">
             <div class="module-card-head">
               <div class="module-icon module-icon-blue">
                 <i class="bi bi-shop"></i>
               </div>
-
               <div>
-                <h3>POS & Bán hàng</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.pos.title">POS &amp; Bán hàng</h3>
+                <p class="module-subtext" data-i18n="modules.pos.description">
                   Tối ưu doanh thu tại mọi điểm chạm với khách hàng.
                 </p>
               </div>
             </div>
-
             <div class="module-preview data-table">
               <div class="data-table-head">
-                <span>Sản phẩm</span>
-                <span>SL</span>
-                <span>Thành tiền</span>
+                <span data-i18n="header.products">Sản phẩm</span>
+                <span data-i18n="common.qty">SL</span>
+                <span data-i18n="modules.pos.preview.amount">Thành tiền</span>
               </div>
-
               <div class="data-row">
                 <div class="data-name">
                   <i class="bi bi-droplet"></i>
@@ -426,7 +512,6 @@
                 <span>1</span>
                 <strong>450.000đ</strong>
               </div>
-
               <div class="data-row">
                 <div class="data-name">
                   <i class="bi bi-droplet"></i>
@@ -435,7 +520,6 @@
                 <span>2</span>
                 <strong>350.000đ</strong>
               </div>
-
               <div class="data-row">
                 <div class="data-name">
                   <i class="bi bi-gift"></i>
@@ -444,39 +528,46 @@
                 <span>1</span>
                 <strong>500.000đ</strong>
               </div>
-
               <div class="data-total">
-                <span>Tổng cộng</span>
+                <span data-i18n="common.total">Tổng cộng</span>
                 <strong>1.300.000đ</strong>
               </div>
             </div>
-
             <ul class="module-list">
-              <li>Thanh toán nhanh chóng</li>
-              <li><i class="bi bi-dot"></i>Nhiều phương thức thanh toán</li>
-              <li><i class="bi bi-dot"></i>Hóa đơn & chứng từ</li>
+              <li data-i18n="modules.pos.feature1">Thanh toán nhanh chóng</li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.pos.feature2"
+                  >Nhiều phương thức thanh toán</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.pos.feature3"
+                  >Hóa đơn &amp; chứng từ</span
+                >
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
-
           <article class="module-card">
             <div class="module-card-head">
               <div class="module-icon module-icon-orange">
                 <i class="bi bi-gift"></i>
               </div>
-
               <div>
-                <h3>Khách hàng thân thiết</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.loyalty.title">Khách hàng thân thiết</h3>
+                <p
+                  class="module-subtext"
+                  data-i18n="modules.loyalty.description"
+                >
                   Xây dựng chương trình thành viên và tăng tỷ lệ khách quay lại.
                 </p>
               </div>
             </div>
-
             <div class="module-preview loyalty-preview">
               <div class="loyalty-top">
                 <div class="loyalty-member">
@@ -485,179 +576,239 @@
                   </span>
                   <strong>Gold Member</strong>
                 </div>
-                <strong class="loyalty-points"> 2.250 điểm </strong>
+                <strong
+                  class="loyalty-points"
+                  data-i18n="modules.loyalty.preview.points"
+                >
+                  2.250 điểm
+                </strong>
               </div>
-
               <p>
-                Thành viên từ
-                <strong>12/04/2024</strong>
+                <span data-i18n="modules.loyalty.preview.memberSince"
+                  >Thành viên từ</span
+                ><strong>12/04/2024</strong>
               </p>
-
               <div class="loyalty-progress">
                 <span></span>
               </div>
-
               <div class="loyalty-progress-text">2.250/5.000</div>
             </div>
-
             <ul class="module-list">
-              <li>Chương trình điểm & cấp bậc</li>
-              <li><i class="bi bi-dot"></i>Thẻ thành viên</li>
-              <li><i class="bi bi-dot"></i>Voucher & phần thưởng</li>
+              <li data-i18n="modules.loyalty.feature1">
+                Chương trình điểm &amp; cấp bậc
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.loyalty.feature2"
+                  >Thẻ thành viên</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.loyalty.feature3"
+                  >Voucher &amp; phần thưởng</span
+                >
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
-
           <article class="module-card">
             <div class="module-card-head">
               <div class="module-icon module-icon-purple">
                 <i class="bi bi-megaphone"></i>
               </div>
-
               <div>
-                <h3>Tự động hóa Marketing</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.marketing.title">
+                  Tự động hóa Marketing
+                </h3>
+                <p
+                  class="module-subtext"
+                  data-i18n="modules.marketing.description"
+                >
                   Tự động triển khai chiến dịch giúp khách hàng quay lại nhiều
                   hơn.
                 </p>
               </div>
             </div>
-
             <div class="module-preview campaign-table">
               <!-- Campaign 1 -->
               <div class="campaign-row">
                 <span class="campaign-icon">
                   <i class="bi bi-circle"></i>
                 </span>
-                <span>Ưu đãi mùa hè</span>
-
-                <span class="preview-badge badge-success"> Đã gửi </span>
+                <span data-i18n="modules.marketing.preview.summer"
+                  >Ưu đãi mùa hè</span
+                >
+                <span
+                  class="preview-badge badge-success"
+                  data-i18n="modules.marketing.preview.sent"
+                >
+                  Đã gửi
+                </span>
               </div>
-
               <div class="campaign-row">
                 <span class="campaign-icon">
                   <i class="bi bi-circle"></i>
                 </span>
-
-                <span>Ưu đãi sinh nhật VIP</span>
-
-                <span class="preview-badge badge-gray"> Đã lên lịch </span>
+                <span data-i18n="modules.marketing.preview.birthday"
+                  >Ưu đãi sinh nhật VIP</span
+                >
+                <span
+                  class="preview-badge badge-gray"
+                  data-i18n="modules.marketing.preview.scheduled"
+                >
+                  Đã lên lịch
+                </span>
               </div>
-
               <div class="campaign-row">
                 <span class="campaign-icon">
                   <i class="bi bi-circle"></i>
                 </span>
-
-                <span>Chiến dịch tái tương tác</span>
-
-                <span class="preview-badge badge-light"> Bản nháp </span>
+                <span data-i18n="modules.marketing.preview.reengagement"
+                  >Chiến dịch tái tương tác</span
+                >
+                <span
+                  class="preview-badge badge-light"
+                  data-i18n="modules.marketing.preview.draft"
+                >
+                  Bản nháp
+                </span>
               </div>
             </div>
-
             <ul class="module-list">
-              <li>Trình tạo chiến dịch</li>
-              <li><i class="bi bi-dot"></i>SMS, Email, Push & In-app</li>
-              <li><i class="bi bi-dot"></i>Theo dõi hiệu quả chiến dịch</li>
+              <li data-i18n="modules.marketing.feature1">
+                Trình tạo chiến dịch
+              </li>
+              <li><i class="bi bi-dot"></i>SMS, Email, Push &amp; In-app</li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.marketing.feature3"
+                  >Theo dõi hiệu quả chiến dịch</span
+                >
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
-
           <article class="module-card">
             <div class="module-card-head">
               <div class="module-icon module-icon-red">
                 <i class="bi bi-box-seam"></i>
               </div>
-
               <div>
-                <h3>Kho hàng & Vật tư</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.inventory.title">
+                  Kho hàng &amp; Vật tư
+                </h3>
+                <p
+                  class="module-subtext"
+                  data-i18n="modules.inventory.description"
+                >
                   Theo dõi tồn kho theo thời gian thực và hạn chế thiếu hàng.
                 </p>
               </div>
             </div>
-
             <!-- Inventory table -->
             <div class="module-preview data-table">
               <div class="data-table-head">
-                <span>Sản phẩm</span>
-                <span>SL</span>
-                <span>Trạng thái</span>
+                <span data-i18n="header.products">Sản phẩm</span>
+                <span data-i18n="common.qty">SL</span>
+                <span data-i18n="common.status">Trạng thái</span>
               </div>
-
               <div class="data-row">
-                <span>Dầu Massage</span>
-
+                <span data-i18n="modules.inventory.preview.massageOil"
+                  >Dầu Massage</span
+                >
                 <strong>120</strong>
-
-                <span class="preview-badge badge-success"> Còn hàng </span>
+                <span
+                  class="preview-badge badge-success"
+                  data-i18n="common.inStock"
+                >
+                  Còn hàng
+                </span>
               </div>
-
               <div class="data-row">
-                <span>Khăn Spa</span>
-
+                <span data-i18n="modules.inventory.preview.towel"
+                  >Khăn Spa</span
+                >
                 <strong>45</strong>
-
-                <span class="preview-badge badge-success"> Còn hàng </span>
+                <span
+                  class="preview-badge badge-success"
+                  data-i18n="common.inStock"
+                >
+                  Còn hàng
+                </span>
               </div>
-
               <div class="data-row">
                 <span>Serum Collagen</span>
-
                 <strong>8</strong>
-
-                <span class="preview-badge badge-danger"> Sắp hết </span>
+                <span
+                  class="preview-badge badge-danger"
+                  data-i18n="common.lowStock"
+                >
+                  Sắp hết
+                </span>
               </div>
             </div>
-
             <ul class="module-list">
-              <li>Theo dõi tồn kho</li>
-              <li><i class="bi bi-dot"></i>Cảnh báo sắp hết hàng</li>
-              <li><i class="bi bi-dot"></i>Quản lý nhập hàng</li>
+              <li data-i18n="modules.inventory.feature1">Theo dõi tồn kho</li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.inventory.feature2"
+                  >Cảnh báo sắp hết hàng</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.inventory.feature3"
+                  >Quản lý nhập hàng</span
+                >
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
-
           <article class="module-card">
             <div class="module-card-head">
               <div class="module-icon module-icon-green">
                 <i class="bi bi-graph-up-arrow"></i>
               </div>
-
               <div>
-                <h3>Báo cáo & Phân tích</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.analytics.title">
+                  Báo cáo &amp; Phân tích
+                </h3>
+                <p
+                  class="module-subtext"
+                  data-i18n="modules.analytics.description"
+                >
                   Ra quyết định dựa trên dữ liệu với các báo cáo trực quan.
                 </p>
               </div>
             </div>
-
             <div class="module-preview analytics-preview">
-              <span class="analytics-label"> Doanh thu tháng này </span>
-
+              <span
+                class="analytics-label"
+                data-i18n="modules.analytics.preview.revenue"
+              >
+                Doanh thu tháng này
+              </span>
               <strong class="analytics-value"> 2.816.000đ </strong>
-
               <div class="analytics-growth">
-                <i class="bi bi-arrow-up"></i>
-                12% so với tháng trước
+                <i class="bi bi-arrow-up"></i
+                ><span data-i18n="modules.analytics.preview.growth"
+                  >12% so với tháng trước</span
+                >
               </div>
-
               <svg
-                class="analytics-chart"
-                viewBox="0 0 200 55"
                 aria-hidden="true"
+                class="analytics-chart"
+                viewbox="0 0 200 55"
               >
                 <polyline
                   points="
@@ -677,275 +828,262 @@
                 188,8
                 200,13
               "
-                />
+                ></polyline>
               </svg>
             </div>
-
             <ul class="module-list">
-              <li>Dashboard thời gian thực</li>
-              <li><i class="bi bi-dot"></i>Báo cáo tùy chỉnh</li>
-              <li><i class="bi bi-dot"></i>Xuất & chia sẻ dữ liệu</li>
+              <li data-i18n="modules.analytics.feature1">
+                Dashboard thời gian thực
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.analytics.feature2"
+                  >Báo cáo tùy chỉnh</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.analytics.feature3"
+                  >Xuất &amp; chia sẻ dữ liệu</span
+                >
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
-
           <article class="module-card">
             <div class="module-card-head">
               <div class="module-icon module-icon-blue">
                 <i class="bi bi-people"></i>
               </div>
-
               <div>
-                <h3>Nhân viên & Hiệu suất</h3>
-                <p class="module-subtext">
+                <h3 data-i18n="modules.staff.title">
+                  Nhân viên &amp; Hiệu suất
+                </h3>
+                <p class="module-subtext" data-i18n="modules.staff.description">
                   Quản lý đội ngũ và nâng cao hiệu suất làm việc.
                 </p>
               </div>
             </div>
-
             <div class="module-preview person-table">
               <!-- Header -->
               <div class="staff-table-head">
-                <span>Nhân viên</span>
-                <span>Doanh thu</span>
+                <span data-i18n="modules.staff.preview.staff">Nhân viên</span>
+                <span data-i18n="common.revenue">Doanh thu</span>
               </div>
-
               <div class="person-row staff-row">
                 <span class="person-avatar">
                   <i class="bi bi-person-fill"></i>
                 </span>
-
                 <div class="person-info">
                   <strong>Nguyễn Jenny</strong>
                 </div>
-
                 <strong class="person-value"> 18.450.000đ </strong>
               </div>
-
               <div class="person-row staff-row">
                 <span class="person-avatar avatar-green">
                   <i class="bi bi-person-fill"></i>
                 </span>
-
                 <div class="person-info">
                   <strong>Trần Lily</strong>
                 </div>
-
                 <strong class="person-value"> 15.120.000đ </strong>
               </div>
-
               <div class="person-row staff-row">
                 <span class="person-avatar avatar-orange">
                   <i class="bi bi-person-fill"></i>
                 </span>
-
                 <div class="person-info">
                   <strong>Phạm Hồng</strong>
                 </div>
-
                 <strong class="person-value"> 12.000.000đ </strong>
               </div>
             </div>
-
             <ul class="module-list">
-              <li>Hoa hồng & chính sách thưởng</li>
-              <li><i class="bi bi-dot"></i>Phân tích hiệu suất</li>
-              <li><i class="bi bi-dot"></i>Quản lý đội ngũ</li>
+              <li data-i18n="modules.staff.feature1">
+                Hoa hồng &amp; chính sách thưởng
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.staff.feature2"
+                  >Phân tích hiệu suất</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-dot"></i
+                ><span data-i18n="modules.staff.feature3">Quản lý đội ngũ</span>
+              </li>
             </ul>
-
-            <a href="#" class="module-link">
-              Tìm hiểu thêm
-              <i class="bi bi-arrow-right"></i>
+            <a class="module-link" href="#"
+              ><span data-i18n="common.learnMore">Tìm hiểu thêm</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </article>
         </div>
-
         <div class="modules-action">
-          <a href="#" class="modules-all-btn btn">
-            Khám phá tất cả tính năng
-            <i class="bi bi-arrow-right"></i>
+          <a class="modules-all-btn btn" href="#"
+            ><span data-i18n="common.exploreAll">Khám phá tất cả tính năng</span
+            ><i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </div>
     </section>
-
     <!-- AI GROWTH SECTION -->
     <section class="ai-growth-section">
       <div class="container">
         <div class="ai-growth-panel">
           <div class="ai-growth-intro">
-            <span class="ai-growth-kicker badge">+ ỨNG DỤNG AI </span>
-
-            <h2>AI giúp bạn tăng trưởng thông minh hơn</h2>
-
-            <p>
+            <span class="ai-growth-kicker badge" data-i18n="ai.badge"
+              >+ ỨNG DỤNG AI
+            </span>
+            <h2 data-i18n="ai.title">AI giúp bạn tăng trưởng thông minh hơn</h2>
+            <p data-i18n="ai.description">
               Tận dụng sức mạnh của AI để tự động hóa công việc, thấu hiểu hành
               vi khách hàng và tăng trưởng doanh thu.
             </p>
-
-            <a href="#" class="ai-growth-btn btn">
-              Khám phá tính năng AI
-              <i class="bi bi-arrow-right"></i>
+            <a class="ai-growth-btn btn" href="#"
+              ><span data-i18n="ai.button">Khám phá tính năng AI</span
+              ><i class="bi bi-arrow-right"></i>
             </a>
           </div>
           <article class="ai-growth-card">
             <div class="ai-growth-icon">
               <i class="bi bi-bag-check"></i>
             </div>
-
-            <h3>AI Gợi ý bán thêm</h3>
-
-            <p>Đề xuất đúng dịch vụ và sản phẩm phù hợp với từng khách hàng.</p>
+            <h3 data-i18n="ai.upsell.title">AI Gợi ý bán thêm</h3>
+            <p data-i18n="ai.upsell.description">
+              Đề xuất đúng dịch vụ và sản phẩm phù hợp với từng khách hàng.
+            </p>
           </article>
-
           <article class="ai-growth-card">
             <div class="ai-growth-icon">
               <i class="bi bi-person-lines-fill"></i>
             </div>
-
-            <h3>AI Thấu hiểu khách hàng</h3>
-
-            <p>Phân tích hành vi, nhu cầu và sở thích của từng khách hàng.</p>
+            <h3 data-i18n="ai.insights.title">AI Thấu hiểu khách hàng</h3>
+            <p data-i18n="ai.insights.description">
+              Phân tích hành vi, nhu cầu và sở thích của từng khách hàng.
+            </p>
           </article>
-
           <article class="ai-growth-card">
             <div class="ai-growth-icon">
               <i class="bi bi-stars"></i>
             </div>
-
-            <h3>AI Chiến dịch thông minh</h3>
-
-            <p>Tự động tạo chiến dịch phù hợp với từng nhóm khách hàng.</p>
+            <h3 data-i18n="ai.campaigns.title">AI Chiến dịch thông minh</h3>
+            <p data-i18n="ai.campaigns.description">
+              Tự động tạo chiến dịch phù hợp với từng nhóm khách hàng.
+            </p>
           </article>
-
           <article class="ai-growth-card">
             <div class="ai-growth-icon">
               <i class="bi bi-graph-up-arrow"></i>
             </div>
-
-            <h3>AI Dự báo</h3>
-
-            <p>
+            <h3 data-i18n="ai.forecasting.title">AI Dự báo</h3>
+            <p data-i18n="ai.forecasting.description">
               Dự báo nhu cầu, xu hướng và hỗ trợ tối ưu nguồn lực doanh nghiệp.
             </p>
           </article>
         </div>
       </div>
     </section>
-
     <!-- INTEGRATIONS -->
     <section class="integrations">
       <div class="container">
         <div class="integrations-head">
-          <span class="integrations-kicker badge"> TÍCH HỢP LIỀN MẠCH </span>
-
-          <h2>Kết nối với các công cụ bạn đang sử dụng</h2>
+          <span
+            class="integrations-kicker badge"
+            data-i18n="integrations.badge"
+          >
+            TÍCH HỢP LIỀN MẠCH
+          </span>
+          <h2 data-i18n="integrations.title">
+            Kết nối với các công cụ bạn đang sử dụng
+          </h2>
         </div>
-
         <div class="integration-logos">
-          <a href="#" aria-label="Zalo">
-            <img src="public/image/zalo.png" alt="Zalo" />
+          <a aria-label="Zalo" href="#">
+            <img alt="Zalo" src="public/image/zalo.png" />
           </a>
-
-          <a href="#" aria-label="Meta">
-            <img src="public/image/meta.webp" alt="Meta" />
+          <a aria-label="Meta" href="#">
+            <img alt="Meta" src="public/image/meta.webp" />
           </a>
-
-          <a href="#" aria-label="Google">
-            <img src="public/image/google.jpg" alt="Google" />
+          <a aria-label="Google" href="#">
+            <img alt="Google" src="public/image/google.jpg" />
           </a>
-
-          <a href="#" aria-label="TikTok">
-            <img src="public/image/tiktok.jpg" alt="TikTok" />
+          <a aria-label="TikTok" href="#">
+            <img alt="TikTok" src="public/image/tiktok.jpg" />
           </a>
-
-          <a href="#" aria-label="MoMo">
-            <img src="public/image/momo.png" alt="MoMo" />
+          <a aria-label="MoMo" href="#">
+            <img alt="MoMo" src="public/image/momo.png" />
           </a>
-
-          <a href="#" aria-label="VNPay">
-            <img src="public/image/vnpay.webp" alt="VNPay" />
+          <a aria-label="VNPay" href="#">
+            <img alt="VNPay" src="public/image/vnpay.webp" />
           </a>
-
-          <a href="#" aria-label="KiotViet">
-            <img src="public/image/meta.webp" alt="KiotViet" />
+          <a aria-label="KiotViet" href="#">
+            <img alt="KiotViet" src="public/image/meta.webp" />
           </a>
-
-          <a href="#" aria-label="Shopee">
-            <img src="public/image/tiktok.jpg" alt="Shopee" />
+          <a aria-label="Shopee" href="#">
+            <img alt="Shopee" src="public/image/tiktok.jpg" />
           </a>
-
-          <a href="#" aria-label="LadiPage">
-            <img src="public/image/google.jpg" alt="LadiPage" />
+          <a aria-label="LadiPage" href="#">
+            <img alt="LadiPage" src="public/image/google.jpg" />
           </a>
-
-          <a href="#" aria-label="Google Business">
-            <img src="public/image/zalo.png" alt="Google Business" />
+          <a aria-label="Google Business" href="#">
+            <img alt="Google Business" src="public/image/zalo.png" />
           </a>
         </div>
       </div>
     </section>
-
     <!-- CTA -->
     <section class="section cta-section">
       <div class="container">
         <div class="cta-banner">
           <div class="cta-grid">
             <div class="cta-content">
-              <h2>
+              <h2 data-i18n="cta.title">
                 Xây dựng tương lai ngành làm đẹp với hạ tầng công nghệ phù hợp
               </h2>
-
-              <p>
+              <p data-i18n="cta.description">
                 Thay đổi cách bạn vận hành, tương tác với khách hàng và phát
                 triển doanh nghiệp với nền tảng tất cả trong một cho ngành làm
                 đẹp.
               </p>
-
               <div class="cta-actions">
-                <a href="#" class="btn btn-light">
-                  Đặt lịch demo – Miễn phí
-                  <i class="bi bi-arrow-right"></i>
+                <a class="btn btn-light" href="#"
+                  ><span data-i18n="cta.bookDemo">Đặt lịch demo – Miễn phí</span
+                  ><i class="bi bi-arrow-right"></i>
                 </a>
-
-                <a href="#" class="btn btn-ghost">
-                  Trò chuyện với chuyên gia
-                  <i class="bi bi-arrow-right"></i>
+                <a class="btn btn-ghost" href="#"
+                  ><span data-i18n="cta.expert">Trò chuyện với chuyên gia</span
+                  ><i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
-
             <div class="cta-visual">
               <img
-                src="public/image/cta-revenue-card.png"
                 alt="Doanh thu hôm nay"
                 class="cta-card-image cta-card-left"
+                src="public/image/cta-revenue-card.png"
               />
-
               <img
-                src="public/image/woman.png"
                 alt="Chuyên viên Myspa sử dụng máy tính bảng"
                 class="cta-woman"
+                src="public/image/woman.png"
               />
-
               <img
-                src="public/image/cta-rate-card.png"
                 alt="Tỷ lệ chốt đơn"
                 class="cta-card-image cta-card-right"
+                src="public/image/cta-rate-card.png"
               />
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="footer">
-      <div class="container">
-        © 2026 Myspa. Giao diện landing page dựng bằng HTML & CSS.
+      <div class="container" data-i18n="footer.copyright">
+        © 2026 Myspa. Giao diện landing page dựng bằng HTML &amp; CSS.
       </div>
     </footer>
     <script>
@@ -980,5 +1118,6 @@
         }
       });
     </script>
+    <script src="public/i18n.js"></script>
   </body>
 </html>

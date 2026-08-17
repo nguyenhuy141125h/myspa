@@ -1,0 +1,193 @@
+{
+  "header": {
+    "products": "Sản phẩm",
+    "dropdown": {
+      "clinic": "Phần mềm quản lý phòng khám",
+      "salon": "Phần mềm quản lý salon tóc",
+      "nails": "Phần mềm quản lý tiệm nails",
+      "brandedApp": "Thiết kế App thương hiệu",
+      "miniApp": "Thiết kế Mini App thương hiệu",
+      "beautyx": "Mở gian hàng trên BeautyX"
+    },
+    "solutions": "Giải pháp",
+    "customers": "Khách hàng",
+    "resources": "Tài nguyên",
+    "about": "Về chúng tôi",
+    "pricing": "Bảng giá",
+    "login": "Đăng nhập",
+    "home": "Trang chủ"
+  },
+  "common": {
+    "bookDemo": "Đặt lịch demo",
+    "learnMore": "Tìm hiểu thêm",
+    "exploreAll": "Khám phá tất cả tính năng",
+    "qty": "SL",
+    "total": "Tổng cộng",
+    "status": "Trạng thái",
+    "inStock": "Còn hàng",
+    "lowStock": "Sắp hết",
+    "revenue": "Doanh thu"
+  },
+  "hero": {
+    "badge": "+ SẢN PHẨM MYSPA",
+    "title": "Mọi thứ bạn cần. Tất cả trên một",
+    "accent": "nền tảng mạnh mẽ.",
+    "description": "Từ việc thu hút khách hàng mới đến mang lại những trải nghiệm tuyệt vời và thúc đẩy tăng trưởng – Myspa cung cấp một bộ công cụ hoàn chỉnh dành cho các doanh nghiệp làm đẹp hiện đại.",
+    "explore": "Khám phá nền tảng",
+    "features": {
+      "unified": {
+        "title": "Nền tảng hợp nhất",
+        "description": "Giải pháp toàn diện"
+      },
+      "sync": {
+        "title": "Đồng bộ",
+        "description": "Luôn cập nhật"
+      },
+      "security": {
+        "title": "An toàn & tin cậy",
+        "description": "Bảo mật tốt"
+      },
+      "scalable": {
+        "title": "Mở rộng",
+        "description": "Luôn phát triển"
+      }
+    }
+  },
+  "modules": {
+    "badge": "CÁC TÍNH NĂNG MẠNH MẼ",
+    "title": "Tất cả công cụ để quản lý, vận hành và phát triển doanh nghiệp làm đẹp",
+    "description": "Được thiết kế dành riêng cho doanh nghiệp làm đẹp. Sẵn sàng đồng hành cùng bạn khi mở rộng quy mô.",
+    "crm": {
+      "title": "CRM & Khách hàng",
+      "description": "Quản lý và xây dựng mối quan hệ lâu dài với khách hàng.",
+      "preview": {
+        "vipCustomer": "Khách hàng VIP",
+        "returningCustomer": "Khách quay lại",
+        "returning": "Quay lại",
+        "newCustomer": "Khách hàng mới",
+        "new": "Khách mới"
+      },
+      "feature1": "Hồ sơ & lịch sử khách hàng",
+      "feature2": "Phân nhóm & gắn thẻ",
+      "feature3": "Ghi chú & sở thích"
+    },
+    "booking": {
+      "title": "Đặt lịch & Lịch hẹn",
+      "description": "Quản lý lịch hẹn nhanh chóng và tiết kiệm thời gian.",
+      "preview": {
+        "month": "Tháng 8 / 2026",
+        "mon": "T2",
+        "tue": "T3",
+        "wed": "T4",
+        "thu": "T5",
+        "fri": "T6",
+        "hairWash": "Gội đầu"
+      },
+      "feature1": "Đặt lịch trực tuyến",
+      "feature2": "Quản lý phòng & nguồn lực",
+      "feature3": "Nhắc lịch & xác nhận lịch hẹn"
+    },
+    "pos": {
+      "title": "POS & Bán hàng",
+      "description": "Tối ưu doanh thu tại mọi điểm chạm với khách hàng.",
+      "preview": {
+        "amount": "Thành tiền"
+      },
+      "feature1": "Thanh toán nhanh chóng",
+      "feature2": "Nhiều phương thức thanh toán",
+      "feature3": "Hóa đơn & chứng từ"
+    },
+    "loyalty": {
+      "title": "Khách hàng thân thiết",
+      "description": "Xây dựng chương trình thành viên và tăng tỷ lệ khách quay lại.",
+      "preview": {
+        "points": "2.250 điểm",
+        "memberSince": "Thành viên từ"
+      },
+      "feature1": "Chương trình điểm & cấp bậc",
+      "feature2": "Thẻ thành viên",
+      "feature3": "Voucher & phần thưởng"
+    },
+    "marketing": {
+      "title": "Tự động hóa Marketing",
+      "description": "Tự động triển khai chiến dịch giúp khách hàng quay lại nhiều hơn.",
+      "preview": {
+        "summer": "Ưu đãi mùa hè",
+        "sent": "Đã gửi",
+        "birthday": "Ưu đãi sinh nhật VIP",
+        "scheduled": "Đã lên lịch",
+        "reengagement": "Chiến dịch tái tương tác",
+        "draft": "Bản nháp"
+      },
+      "feature1": "Trình tạo chiến dịch",
+      "feature3": "Theo dõi hiệu quả chiến dịch"
+    },
+    "inventory": {
+      "title": "Kho hàng & Vật tư",
+      "description": "Theo dõi tồn kho theo thời gian thực và hạn chế thiếu hàng.",
+      "preview": {
+        "massageOil": "Dầu Massage",
+        "towel": "Khăn Spa"
+      },
+      "feature1": "Theo dõi tồn kho",
+      "feature2": "Cảnh báo sắp hết hàng",
+      "feature3": "Quản lý nhập hàng"
+    },
+    "analytics": {
+      "title": "Báo cáo & Phân tích",
+      "description": "Ra quyết định dựa trên dữ liệu với các báo cáo trực quan.",
+      "preview": {
+        "revenue": "Doanh thu tháng này",
+        "growth": "12% so với tháng trước"
+      },
+      "feature1": "Dashboard thời gian thực",
+      "feature2": "Báo cáo tùy chỉnh",
+      "feature3": "Xuất & chia sẻ dữ liệu"
+    },
+    "staff": {
+      "title": "Nhân viên & Hiệu suất",
+      "description": "Quản lý đội ngũ và nâng cao hiệu suất làm việc.",
+      "preview": {
+        "staff": "Nhân viên"
+      },
+      "feature1": "Hoa hồng & chính sách thưởng",
+      "feature2": "Phân tích hiệu suất",
+      "feature3": "Quản lý đội ngũ"
+    }
+  },
+  "ai": {
+    "badge": "+ ỨNG DỤNG AI",
+    "title": "AI giúp bạn tăng trưởng thông minh hơn",
+    "description": "Tận dụng sức mạnh của AI để tự động hóa công việc, thấu hiểu hành vi khách hàng và tăng trưởng doanh thu.",
+    "button": "Khám phá tính năng AI",
+    "upsell": {
+      "title": "AI Gợi ý bán thêm",
+      "description": "Đề xuất đúng dịch vụ và sản phẩm phù hợp với từng khách hàng."
+    },
+    "insights": {
+      "title": "AI Thấu hiểu khách hàng",
+      "description": "Phân tích hành vi, nhu cầu và sở thích của từng khách hàng."
+    },
+    "campaigns": {
+      "title": "AI Chiến dịch thông minh",
+      "description": "Tự động tạo chiến dịch phù hợp với từng nhóm khách hàng."
+    },
+    "forecasting": {
+      "title": "AI Dự báo",
+      "description": "Dự báo nhu cầu, xu hướng và hỗ trợ tối ưu nguồn lực doanh nghiệp."
+    }
+  },
+  "integrations": {
+    "badge": "TÍCH HỢP LIỀN MẠCH",
+    "title": "Kết nối với các công cụ bạn đang sử dụng"
+  },
+  "cta": {
+    "title": "Xây dựng tương lai ngành làm đẹp với hạ tầng công nghệ phù hợp",
+    "description": "Thay đổi cách bạn vận hành, tương tác với khách hàng và phát triển doanh nghiệp với nền tảng tất cả trong một cho ngành làm đẹp.",
+    "bookDemo": "Đặt lịch demo – Miễn phí",
+    "expert": "Trò chuyện với chuyên gia"
+  },
+  "footer": {
+    "copyright": "© 2026 Myspa. Giao diện landing page dựng bằng HTML & CSS."
+  }
+}

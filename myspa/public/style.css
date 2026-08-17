@@ -142,6 +142,8 @@ img {
 
 .nav-item {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item:hover > .nav-link {
@@ -297,6 +299,15 @@ img {
   font-weight: 500;
 }
 
+.mobile-submenu button{
+  color: #7566bd;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  margin-right: auto;
+}
+
 .mobile-phone,
 .mobile-language {
   display: flex;
@@ -403,16 +414,41 @@ button#mobileMenuOpen i {
 }
 
 .dropdown-menu a {
-  display: block;
+  display: flex;
+  margin-left: 0;
+  width: 100%;
   padding: 13px 24px;
   color: #6f57d2;
   font-size: 16px;
   font-weight: 600;
+  border: none;
+  background: #fff;
   text-decoration: none;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .dropdown-menu a:hover {
+  color: #78bd28;
+  background: #f8f7ff;
+}
+
+.dropdown-menu button {
+  display: flex;
+  margin-left: 0;
+  width: 100%;
+  padding: 13px 24px;
+  color: #6f57d2;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
   color: #78bd28;
   background: #f8f7ff;
 }
@@ -1236,7 +1272,7 @@ button#mobileMenuOpen i {
   font-family: var(--fontHeader);
   max-width: 540px;
   margin: 0 0 16px;
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -1969,6 +2005,10 @@ i.bi.bi-x-lg {
     font-size: 16px;
   }
 
+  .mobile-submenu button{
+    font-size: 16px;
+  }
+
   .mobile-auth-actions {
     flex-direction: column;
     align-items: stretch;
@@ -2027,7 +2067,7 @@ i.bi.bi-x-lg {
     font-size: 12px;
   }
 
-    .partner-section {
+  .partner-section {
     padding: 45px 0;
   }
 
@@ -2043,7 +2083,7 @@ i.bi.bi-x-lg {
     min-height: 145px;
   }
 
-    .solutions-section {
+  .solutions-section {
     padding: 45px 0 55px;
   }
 
@@ -2257,4 +2297,3 @@ i.bi.bi-x-lg {
     grid-template-columns: 1fr;
   }
 }
-

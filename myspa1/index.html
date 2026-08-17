@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Myspa</title>
-
+    <link rel="stylesheet" href="public/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -16,72 +19,107 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link
       rel="icon"
       type="image/png"
       href="https://myspa.vn/assets/frontend/images/favicon.png"
     />
-    <link rel="stylesheet" href="public/style.css" />
+    <title>Myspa</title>
   </head>
-
   <body>
     <!-- HEADER -->
     <header class="header">
       <div class="container header-inner">
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
           <img src="public/image/logo.png" alt="Myspa Logo" />
         </a>
 
+        <!-- Menu desktop hiện tại -->
         <nav class="nav">
           <div class="nav-item">
             <a href="#" class="nav-link">
-              Sản phẩm
+              <span data-vi="Sản phẩm" data-en="Products">Sản phẩm</span>
+
               <img class="drop-down-icon" src="public/image/icon.svg" alt="" />
             </a>
+
             <div class="dropdown-menu">
-              <a href="#">Phần mềm quản lý phòng khám</a>
-              <a href="#">Phần mềm quản lý salon tóc</a>
-              <a href="#">Phần mềm quản lý tiệm nails</a>
-              <a href="#">Thiết kế App thương hiệu</a>
-              <a href="#">Thiết kế Mini App thương hiệu</a>
-              <a href="#">Marketing Automation ZNS</a>
+              <a
+                href="#"
+                data-vi="Phần mềm quản lý spa"
+                data-en="Spa Management Software"
+                >Phần mềm quản lý spa
+              </a>
+              <a
+                href="#"
+                data-vi="Phần mềm quản lý phòng khám"
+                data-en="Clinic Management Software"
+                >Phần mềm quản lý phòng khám</a
+              >
+              <a
+                href="#"
+                data-vi="Phần mềm quản lý salon tóc"
+                data-en="Hair Salon Management Software"
+                >Phần mềm quản lý salon tóc</a
+              >
+              <a
+                href="#"
+                data-vi="Phần mềm quản lý tiệm nails"
+                data-en="Nail Salon Management Software"
+                >Phần mềm quản lý tiệm nails</a
+              >
             </div>
           </div>
 
-          <a href="#" class="nav-link">Giải pháp</a>
-          <a href="#" class="nav-link">Khách hàng</a>
-          <a href="#" class="nav-link">Tài nguyên</a>
-          <a href="#" class="nav-link">Về chúng tôi</a>
-          <a href="pricing-complete.html" class="nav-link active">Bảng giá</a>
+          <a href="#" class="nav-link" data-vi="Giải pháp" data-en="Solutions"
+            >Giải pháp</a
+          >
+          <a href="#" class="nav-link" data-vi="Khách hàng" data-en="Customers"
+            >Khách hàng</a
+          >
+          <a href="#" class="nav-link" data-vi="Tài nguyên" data-en="Resources"
+            >Tài nguyên</a
+          >
+          <a href="#" class="nav-link" data-vi="Về chúng tôi" data-en="About us"
+            >Về chúng tôi</a
+          >
+          <a href="#" class="nav-link" data-vi="Bảng giá" data-en="Pricing"
+            >Bảng giá</a
+          >
         </nav>
 
         <div class="header-actions">
           <div class="nav-item">
             <a href="#" class="lang nav-link">
-              VI
+              <i class="bi bi-globe"></i>
+              <span data-vi="VI" data-en="EN"> VI </span>
               <img class="drop-down-icon" src="public/image/icon.svg" alt="" />
             </a>
             <div class="dropdown-menu vi">
-              <a href="#">VI</a>
-              <a href="#">EN</a>
+              <button type="button" onclick="changeLanguage('vi')">VI</button>
+              <button type="button" onclick="changeLanguage('en')">EN</button>
             </div>
           </div>
-          <a href="#" class="login-btn">Đăng nhập</a>
-          <a href="#" class="btn btn-primary btn-sm">Đặt lịch demo</a>
+          <a href="#" class="login-btn" data-vi="Đăng nhập" data-en="Login"
+            >Đăng nhập</a
+          >
+          <a
+            href="#"
+            class="btn btn-primary"
+            data-vi="Đặt lịch demo"
+            data-en="Book a demo"
+            >Đặt lịch demo</a
+          >
         </div>
 
+        <!-- Chỉ hiện trên tablet/mobile -->
         <button
           type="button"
           class="mobile-menu-toggle"
@@ -91,74 +129,115 @@
         >
           <i class="fa-solid fa-bars"></i>
         </button>
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-top">
+            <a href="#" class="mobile-logo">
+              <img src="public/image/logo.png" alt="Myspa Logo" />
+            </a>
+
+            <button
+              type="button"
+              class="mobile-menu-close"
+              id="mobileMenuClose"
+              aria-label="Đóng menu"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <nav class="mobile-nav">
+            <details class="mobile-nav-dropdown">
+              <summary>
+                <span data-vi="Sản phẩm" data-en="Products">Sản phẩm</span>
+                <i class="bi bi-chevron-down"></i>
+              </summary>
+
+              <div class="mobile-submenu">
+                <a
+                  href="#"
+                  data-vi="Phần mềm quản lý spa"
+                  data-en="Spa Management Software"
+                  >Phần mềm quản lý spa
+                </a>
+                <a
+                  href="#"
+                  data-vi="Phần mềm quản lý phòng khám"
+                  data-en="Clinic Management Software"
+                  >Phần mềm quản lý phòng khám</a
+                >
+                <a
+                  href="#"
+                  data-vi="Phần mềm quản lý salon tóc"
+                  data-en="Hair Salon Management Software"
+                  >Phần mềm quản lý salon tóc</a
+                >
+                <a
+                  href="#"
+                  data-vi="Phần mềm quản lý tiệm nails"
+                  data-en="Nail Salon Management Software"
+                  >Phần mềm quản lý tiệm nails</a
+                >
+              </div>
+            </details>
+            <a href="#" data-vi="Giải pháp" data-en="Solutions">Giải pháp</a>
+            <a href="#" data-vi="Khách hàng" data-en="Customers">Khách hàng</a>
+            <a href="#" data-vi="Tài nguyên" data-en="Resources">Tài nguyên</a>
+            <a href="#" data-vi="Về chúng tôi" data-en="About us"
+              >Về chúng tôi</a
+            >
+            <a href="#" data-vi="Bảng giá" data-en="Pricing">Bảng giá</a>
+            <details class="mobile-nav-dropdown">
+              <summary>
+                <span data-vi="VI" data-en="EN">VI</span>
+                <i class="bi bi-chevron-down"></i>
+              </summary>
+
+              <div class="mobile-submenu">
+                <button onclick="changeLanguage('vi')">VI</button>
+                <button onclick="changeLanguage('en')">EN</button>
+              </div>
+            </details>
+            <div class="mobile-auth-actions">
+              <a href="#" class="mobile-login-btn"> Đăng nhập </a>
+
+              <a href="#" class="mobile-demo-btn">
+                Đặt lịch demo
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-top">
-        <a href="index.html" class="mobile-logo">
-          <img src="public/image/logo.png" alt="Myspa Logo" />
-        </a>
-
-        <button
-          type="button"
-          class="mobile-menu-close"
-          id="mobileMenuClose"
-          aria-label="Đóng menu"
-        >
-          <i class="bi bi-x-lg"></i>
-        </button>
-      </div>
-
-      <nav class="mobile-nav">
-        <div class="nav-item">
-          <a href="#" class="nav-link">
-            Sản phẩm
-
-            <img class="drop-down-icon" src="public/image/icon.svg" alt="" />
-          </a>
-
-          <div class="dropdown-menu">
-            <a href="#">Phần mềm quản lý phòng khám</a>
-            <a href="#">Phần mềm quản lý salon tóc</a>
-            <a href="#">Phần mềm quản lý tiệm nails</a>
-            <a href="#">Thiết kế App thương hiệu</a>
-            <a href="#">Thiết kế Mini App thương hiệu</a>
-            <a href="#">Lucky Wheel</a>
-            <a href="#">Marketing Automation ZNS</a>
-            <a href="#">Mở gian hàng trên BeautyX</a>
-          </div>
-        </div>
-        <a href="#" class="nav-link">Giải pháp</a>
-        <a href="#" class="nav-link">Khách hàng</a>
-        <a href="#" class="nav-link">Tài nguyên</a>
-        <a href="#" class="nav-link">Về chúng tôi</a>
-        <a href="#" class="nav-link">Bảng giá</a>
-
-        <div class="mobile-auth-actions">
-          <a href="#" class="mobile-login-btn">Đăng nhập</a>
-          <a href="#" class="mobile-demo-btn">
-            Đặt lịch demo
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </nav>
-    </div>
 
     <main>
       <!-- HERO -->
       <section class="pricing-hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <div class="hero-kicker">+ Pricing</div>
-
+            <div class="badge" data-vi="+ Bảng giá" data-en="+ Pricing">
+              + Bảng giá
+            </div>
             <h1 class="hero-title">
-              Bảng giá dành cho doanh nghiệp
-              <span class="accent">làm đẹp hiện đại</span>
+              <span
+                data-vi="Bảng giá dành cho doanh nghiệp"
+                data-en="Pricing built for modern"
+                >Bảng giá dành cho doanh nghiệp</span
+              >
+              <span
+                class="accent"
+                data-vi="làm đẹp hiện đại"
+                data-en="beauty businesses"
+                >làm đẹp hiện đại</span
+              >
             </h1>
-
-            <p class="hero-desc">
+            <p
+              class="hero-desc"
+              data-vi="Các gói giải pháp linh hoạt dành cho Spa, Clinic, Salon và chuỗi
+              làm đẹp — từ một cơ sở độc lập đến hệ thống doanh nghiệp nhiều chi
+              nhánh."
+              data-en="Flexible infrastructure plans for Spa, Clinic, Salon and Beauty Chains — from single-location businesses to enterprise operations."
+            >
               Các gói giải pháp linh hoạt dành cho Spa, Clinic, Salon và chuỗi
               làm đẹp — từ một cơ sở độc lập đến hệ thống doanh nghiệp nhiều chi
               nhánh.
@@ -166,11 +245,15 @@
 
             <div class="hero-actions">
               <a href="#plans" class="btn btn-primary">
-                Dùng thử miễn phí
+                <span data-vi="Dùng thử miễn phí" data-en="Start free trial"
+                  >Dùng thử miễn phí</span
+                >
                 <i class="bi bi-arrow-right"></i>
               </a>
               <a href="#" class="btn btn-outline">
-                Đặt lịch tư vấn
+                <span data-vi="Đặt lịch tư vấn" data-en="Book enterprise demo"
+                  >Đặt lịch tư vấn</span
+                >
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -178,15 +261,23 @@
             <div class="hero-features">
               <div class="hero-feature-item">
                 <i class="bi bi-clock-history"></i>
-                <strong>14 ngày dùng thử</strong>
+                <strong data-vi="14 ngày dùng thử" data-en="14-day free trial"
+                  >14 ngày dùng thử</strong
+                >
               </div>
               <div class="hero-feature-item">
                 <i class="bi bi-credit-card"></i>
-                <strong>Không cần thẻ</strong>
+                <strong
+                  data-vi="Không cần thẻ"
+                  data-en="No credit card required"
+                  >Không cần thẻ</strong
+                >
               </div>
               <div class="hero-feature-item">
                 <i class="bi bi-shield-check"></i>
-                <strong>Hủy bất kỳ lúc nào</strong>
+                <strong data-vi="Hủy bất kỳ lúc nào" data-en="Cancel anytime"
+                  >Hủy bất kỳ lúc nào</strong
+                >
               </div>
             </div>
           </div>
@@ -202,7 +293,6 @@
           </div>
         </div>
       </section>
-
       <!-- METRICS -->
       <section class="metrics-section">
         <div class="container">
@@ -210,13 +300,23 @@
             <div class="metric-item">
               <div class="metric-icon"><i class="bi bi-buildings"></i></div>
               <div>
-                <strong>10,000+</strong><span>Doanh nghiệp tin dùng</span>
+                <strong>10,000+</strong
+                ><span
+                  data-vi="Doanh nghiệp tin dùng"
+                  data-en="Businesses trust us"
+                  >Doanh nghiệp tin dùng</span
+                >
               </div>
             </div>
             <div class="metric-item">
               <div class="metric-icon"><i class="bi bi-people"></i></div>
               <div>
-                <strong>3M+</strong><span>Khách hàng được quản lý</span>
+                <strong>3M+</strong
+                ><span
+                  data-vi="Khách hàng được quản lý"
+                  data-en="Customers managed"
+                  >Khách hàng được quản lý</span
+                >
               </div>
             </div>
             <div class="metric-item">
@@ -224,32 +324,61 @@
                 <i class="bi bi-calendar-event"></i>
               </div>
               <div>
-                <strong>50M+</strong><span>Lượt đặt lịch đã xử lý</span>
+                <strong>50M+</strong
+                ><span
+                  data-vi="Lượt đặt lịch đã xử lý"
+                  data-en="Appointments processed"
+                  >Lượt đặt lịch đã xử lý</span
+                >
               </div>
             </div>
             <div class="metric-item">
               <div class="metric-icon"><i class="bi bi-shield-check"></i></div>
               <div>
-                <strong>99.9%</strong><span>Thời gian hoạt động hệ thống</span>
+                <strong>99.9%</strong
+                ><span
+                  data-vi="Thời gian hoạt động hệ thống"
+                  data-en="System uptime"
+                  >Thời gian hoạt động hệ thống</span
+                >
               </div>
             </div>
             <div class="metric-item">
               <div class="metric-icon"><i class="bi bi-headset"></i></div>
               <div>
-                <strong>500+</strong><span>Chuỗi làm đẹp được hỗ trợ</span>
+                <strong>500+</strong
+                ><span
+                  data-vi="Chuỗi làm đẹp được hỗ trợ"
+                  data-en="Beauty chains supported"
+                  >Chuỗi làm đẹp được hỗ trợ</span
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <!-- PLANS -->
       <section class="plans-section section" id="plans">
         <div class="container">
           <div class="section-head pricing-head">
-            <div class="section-kicker">CÁC GÓI GIẢI PHÁP</div>
-            <h2>Chọn gói phù hợp với doanh nghiệp của bạn</h2>
-            <p>
+            <div
+              class="badge"
+              data-vi="CÁC GÓI GIẢI PHÁP"
+              data-en="INFRASTRUCTURE PLANS"
+            >
+              CÁC GÓI GIẢI PHÁP
+            </div>
+            <h2
+              data-vi="Chọn gói phù hợp với doanh nghiệp của bạn"
+              data-en="Choose the plan that fits your business"
+            >
+              Chọn gói phù hợp với doanh nghiệp của bạn
+            </h2>
+            <p
+              data-vi="Tất cả các gói đều bao gồm nền tảng cốt lõi, bảo mật và cập nhật
+              hệ thống thường xuyên."
+              data-en="All plans include core platform, security and regular updates."
+            >
               Tất cả các gói đều bao gồm nền tảng cốt lõi, bảo mật và cập nhật
               hệ thống thường xuyên.
             </p>
@@ -260,77 +389,178 @@
               <div class="pricing-card-head">
                 <div class="plan-icon green"><i class="bi bi-leaf"></i></div>
                 <div>
-                  <h3>Khởi đầu</h3>
-                  <p>Dành cho Spa & Salon quy mô nhỏ</p>
+                  <h3 data-vi="Khởi đầu" data-en="Pricing">Starter</h3>
+                  <p
+                    data-vi="Dành cho Spa & Salon quy mô nhỏ"
+                    data-en="For independent Spa & Salon"
+                  >
+                    Dành cho Spa & Salon quy mô nhỏ
+                  </p>
                 </div>
               </div>
 
               <div class="plan-price">
-                <small>Chỉ từ</small>
-                <div><strong>$9</strong><span>/tháng</span></div>
-                <p>Thanh toán theo năm</p>
+                <small data-vi="Chỉ từ" data-en="Starting at">Chỉ từ</small>
+                <div>
+                  <strong data-vi="$9" data-en="$9">$9</strong
+                  ><span data-vi="/tháng" data-en="/month">/tháng</span>
+                </div>
+                <p data-vi="Thanh toán theo năm" data-en="Billed annually">
+                  Thanh toán theo năm
+                </p>
               </div>
 
               <ul class="plan-features">
-                <li><i class="bi bi-check-lg"></i>1 chi nhánh</li>
-                <li><i class="bi bi-check-lg"></i>Quản lý khách hàng (CRM)</li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Đặt lịch & quản lý lịch hẹn
+                  <i class="bi bi-check-lg"></i
+                  ><span data-vi="1 chi nhánh" data-en="1 branch"
+                    >1 chi nhánh</span
+                  >
                 </li>
-                <li><i class="bi bi-check-lg"></i>POS & quản lý bán hàng</li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Báo cáo & phân tích cơ bản
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Quản lý khách hàng (CRM)"
+                    data-en="Core CRM & customer management"
+                    >Quản lý khách hàng (CRM)</span
+                  >
                 </li>
-                <li><i class="bi bi-check-lg"></i>Hỗ trợ qua Email / SMS</li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Đặt lịch & quản lý lịch hẹn"
+                    data-en="Booking & appointment"
+                    >Đặt lịch & quản lý lịch hẹn</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span data-vi="POS & quản lý bán hàng" data-en="POS & sales"
+                    >POS & quản lý bán hàng</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Báo cáo & phân tích cơ bản"
+                    data-en="Basic analytics & reports"
+                    >Báo cáo & phân tích cơ bản</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Hỗ trợ qua Email / SMS"
+                    data-en="Email & SMS support"
+                    >Hỗ trợ qua Email / SMS</span
+                  >
+                </li>
               </ul>
 
               <a href="#" class="btn plan-btn plan-btn-outline">
-                Dùng thử miễn phí
+                <span data-vi="Dùng thử miễn phí" data-en="Start free trial"
+                  >Dùng thử miễn phí</span
+                >
                 <i class="bi bi-arrow-right"></i>
               </a>
             </article>
 
             <article class="pricing-card pricing-card-popular">
-              <div class="popular-tag">PHỔ BIẾN NHẤT</div>
+              <div
+                class="popular-tag"
+                data-vi="PHỔ BIẾN NHẤT"
+                data-en="MOST POPULAR"
+              >
+                PHỔ BIẾN NHẤT
+              </div>
 
               <div class="pricing-card-head">
                 <div class="plan-icon purple"><i class="bi bi-stars"></i></div>
                 <div>
-                  <h3>Tăng trưởng</h3>
-                  <p>Dành cho doanh nghiệp đang mở rộng</p>
+                  <h3 data-vi="Tăng trưởng" data-en="Growth">Tăng trưởng</h3>
+                  <p
+                    data-vi="Dành cho doanh nghiệp đang mở rộng"
+                    data-en="For growing beauty businesses"
+                  >
+                    Dành cho doanh nghiệp đang mở rộng
+                  </p>
                 </div>
               </div>
 
               <div class="plan-price">
-                <small>Chỉ từ</small>
-                <div><strong>$29</strong><span>/tháng</span></div>
-                <p>Thanh toán theo năm</p>
+                <small data-vi="Chỉ từ" data-en="Starting at">Chỉ từ</small>
+                <div>
+                  <strong data-vi="$29" data-en="$29">$29</strong
+                  ><span data-vi="/tháng" data-en="/month">/tháng</span>
+                </div>
+                <p data-vi="Thanh toán theo năm" data-en="Billed annually">
+                  Thanh toán theo năm
+                </p>
               </div>
 
               <ul class="plan-features">
                 <li>
-                  <i class="bi bi-check-lg"></i>Bao gồm toàn bộ tính năng gói
-                  Khởi đầu
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Bao gồm toàn bộ tính năng gói Khởi đầu"
+                    data-en="Everything in Starter, plus"
+                    >Bao gồm toàn bộ tính năng gói Khởi đầu</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-lg"></i>AI gợi ý dịch vụ & bán thêm
-                </li>
-                <li><i class="bi bi-check-lg"></i>Tự động hóa Marketing</li>
-                <li>
-                  <i class="bi bi-check-lg"></i>Khách hàng thân thiết & thành
-                  viên
-                </li>
-                <li>
-                  <i class="bi bi-check-lg"></i>Quản lý nhân viên & phân quyền
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="AI gợi ý dịch vụ & bán thêm"
+                    data-en="AI Upsell & recommendations"
+                    >AI gợi ý dịch vụ & bán thêm</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Báo cáo & phân tích nâng cao
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Tự động hóa Marketing"
+                    data-en="Marketing automation"
+                    >Tự động hóa Marketing</span
+                  >
                 </li>
-                <li><i class="bi bi-check-lg"></i>Ưu tiên hỗ trợ</li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Khách hàng thân thiết & thành viên"
+                    data-en="Loyalty & membership"
+                    >Khách hàng thân thiết & thành viên</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Quản lý nhân viên & phân quyền"
+                    data-en="Multi-user & role management"
+                    >Quản lý nhân viên & phân quyền</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Báo cáo & phân tích nâng cao"
+                    data-en="Advanced analytics & dashboards"
+                    >Báo cáo & phân tích nâng cao</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span data-vi="Ưu tiên hỗ trợ" data-en="Priority support"
+                    >Ưu tiên hỗ trợ</span
+                  >
+                </li>
               </ul>
 
               <a href="#" class="btn btn-primary plan-btn">
-                Bắt đầu tăng trưởng
+                <span
+                  data-vi="Bắt đầu tăng trưởng"
+                  data-en="Scale your business"
+                  >Bắt đầu tăng trưởng</span
+                >
                 <i class="bi bi-arrow-right"></i>
               </a>
             </article>
@@ -341,56 +571,116 @@
                   <i class="bi bi-diagram-3"></i>
                 </div>
                 <div>
-                  <h3>Doanh nghiệp</h3>
-                  <p>Dành cho chuỗi làm đẹp & phòng khám</p>
+                  <h3 data-vi="Doanh nghiệp" data-en="Enterprise">
+                    Doanh nghiệp
+                  </h3>
+                  <p
+                    data-vi="Dành cho chuỗi làm đẹp & phòng khám"
+                    data-en="For beauty chains & clinic groups"
+                  >
+                    Dành cho chuỗi làm đẹp & phòng khám
+                  </p>
                 </div>
               </div>
 
               <div class="plan-price">
-                <small>Chi phí</small>
-                <div><strong>Liên hệ</strong></div>
-                <p>Tùy chỉnh theo nhu cầu doanh nghiệp</p>
+                <small data-vi="Chi phí" data-en="Expense">Chi phí</small>
+                <div>
+                  <strong data-vi="Liên hệ" data-en="Custom">Liên hệ</strong>
+                </div>
+                <p
+                  data-vi="Tùy chỉnh theo nhu cầu doanh nghiệp"
+                  data-en="Tailored to your business"
+                >
+                  Tùy chỉnh theo nhu cầu doanh nghiệp
+                </p>
               </div>
 
               <ul class="plan-features">
                 <li>
-                  <i class="bi bi-check-lg"></i>Bao gồm toàn bộ tính năng gói
-                  Tăng trưởng
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Bao gồm toàn bộ tính năng gói Tăng trưởng"
+                    data-en="Everything in Growth, plus"
+                    >Bao gồm toàn bộ tính năng gói Tăng trưởng</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Quản lý hệ thống đa chi nhánh
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Quản lý hệ thống đa chi nhánh"
+                    data-en="Multi-branch infrastructure"
+                    >Quản lý hệ thống đa chi nhánh</span
+                  >
                 </li>
-                <li><i class="bi bi-check-lg"></i>Phân tích nâng cao & AI</li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Di chuyển & đồng bộ dữ liệu
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Phân tích nâng cao & AI"
+                    data-en="Advanced analytics & AI"
+                    >Phân tích nâng cao & AI</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Tùy chỉnh quy trình vận hành
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Di chuyển & đồng bộ dữ liệu"
+                    data-en="Loyalty custom integrations"
+                    >Di chuyển & đồng bộ dữ liệu</span
+                  >
                 </li>
-                <li><i class="bi bi-check-lg"></i>Chuyên viên hỗ trợ riêng</li>
                 <li>
-                  <i class="bi bi-check-lg"></i>Hỗ trợ ưu tiên dành cho doanh
-                  nghiệp
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Tùy chỉnh quy trình vận hành"
+                    data-en="Custom workflows"
+                    >Tùy chỉnh quy trình vận hành</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Chuyên viên hỗ trợ riêng"
+                    data-en="Dedicated account manager"
+                    >Chuyên viên hỗ trợ riêng</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-check-lg"></i
+                  ><span
+                    data-vi="Hỗ trợ ưu tiên dành cho doanh nghiệp"
+                    data-en="White-label capabilities"
+                    >Hỗ trợ ưu tiên dành cho doanh nghiệp</span
+                  >
                 </li>
               </ul>
 
               <a href="#" class="btn plan-btn plan-btn-dark">
-                Liên hệ tư vấn
+                <span data-vi="Liên hệ tư vấn" data-en="Talk to sales"
+                  >Liên hệ tư vấn</span
+                >
                 <i class="bi bi-arrow-right"></i>
               </a>
             </article>
           </div>
 
           <div class="custom-solution">
-            Bạn cần giải pháp riêng?
+            <span
+              data-vi="Bạn cần giải pháp riêng?"
+              data-en="Need a custom solution?"
+              >Bạn cần giải pháp riêng?</span
+            >
             <a href="#">
-              Trò chuyện với đội ngũ tư vấn
+              <span
+                data-vi="Trò chuyện với đội ngũ tư vấn"
+                data-en="Talk to our solutions team"
+                >Trò chuyện với đội ngũ tư vấn</span
+              >
               <i class="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
       </section>
-
       <!-- COMPARE -->
       <section class="compare-section">
         <div class="container">
@@ -398,19 +688,46 @@
             <table class="compare-table">
               <thead>
                 <tr>
-                  <th class="feature-column">So sánh các gói</th>
-                  <th><strong>Khởi đầu</strong><span>$9 / tháng</span></th>
-                  <th class="growth-column">
-                    <em>Phổ biến nhất</em>
-                    <strong>Tăng trưởng</strong>
-                    <span>$29 / tháng</span>
+                  <th
+                    class="feature-column"
+                    data-vi="So sánh các gói"
+                    data-en="Compare plans"
+                  >
+                    So sánh các gói
                   </th>
-                  <th><strong>Doanh nghiệp</strong><span>Liên hệ</span></th>
+                  <th>
+                    <strong data-vi="Khởi đầu" data-en="Starter"
+                      >Khởi đầu</strong
+                    ><span data-vi="$9 / tháng" data-en="$9 / month"
+                      >$9 / tháng</span
+                    >
+                  </th>
+                  <th class="growth-column">
+                    <em data-vi="Phổ biến nhất" data-en="Most Popular"
+                      >Phổ biến nhất</em
+                    >
+                    <strong data-vi="Tăng trưởng" data-en="Growth"
+                      >Tăng trưởng</strong
+                    >
+                    <span data-vi="$29 / tháng" data-en="$29 / month"
+                      >$29 / tháng</span
+                    >
+                  </th>
+                  <th>
+                    <strong data-vi="Doanh nghiệp" data-en="Enterprise"
+                      >Doanh nghiệp</strong
+                    ><span data-vi="Liên hệ" data-en="Custom">Liên hệ</span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><i class="bi bi-speedometer2"></i>Quản lý vận hành</td>
+                  <td>
+                    <i class="bi bi-speedometer2"></i
+                    ><span data-vi="Quản lý vận hành" data-en="Operations"
+                      >Quản lý vận hành</span
+                    >
+                  </td>
                   <td><i class="bi bi-check-lg check"></i></td>
                   <td class="growth-column">
                     <i class="bi bi-check-lg check"></i>
@@ -418,7 +735,14 @@
                   <td><i class="bi bi-check-lg check"></i></td>
                 </tr>
                 <tr>
-                  <td><i class="bi bi-people"></i>CRM & Quản lý khách hàng</td>
+                  <td>
+                    <i class="bi bi-people"></i
+                    ><span
+                      data-vi="CRM & Quản lý khách hàng"
+                      data-en="CRM & Customers"
+                      >CRM & Quản lý khách hàng</span
+                    >
+                  </td>
                   <td><i class="bi bi-check-lg check"></i></td>
                   <td class="growth-column">
                     <i class="bi bi-check-lg check"></i>
@@ -426,7 +750,12 @@
                   <td><i class="bi bi-check-lg check"></i></td>
                 </tr>
                 <tr>
-                  <td><i class="bi bi-megaphone"></i>AI & Tự động hóa</td>
+                  <td>
+                    <i class="bi bi-megaphone"></i
+                    ><span data-vi="AI & Tự động hóa" data-en="AI & Automation"
+                      >AI & Tự động hóa</span
+                    >
+                  </td>
                   <td><i class="bi bi-dash"></i></td>
                   <td class="growth-column">
                     <i class="bi bi-check-lg check"></i>
@@ -434,13 +763,35 @@
                   <td><i class="bi bi-check-lg check"></i></td>
                 </tr>
                 <tr>
-                  <td><i class="bi bi-graph-up"></i>Báo cáo & Phân tích</td>
-                  <td>Cơ bản</td>
-                  <td class="growth-column">Nâng cao</td>
-                  <td>Phân tích doanh nghiệp</td>
+                  <td>
+                    <i class="bi bi-graph-up"></i
+                    ><span
+                      data-vi="Báo cáo & Phân tích"
+                      data-en="Analytics & Insights"
+                      >Báo cáo & Phân tích</span
+                    >
+                  </td>
+                  <td data-vi="Cơ bản" data-en="Basic reports">Cơ bản</td>
+                  <td
+                    class="growth-column"
+                    data-vi="Nâng cao"
+                    data-en="Advanced"
+                  >
+                    Nâng cao
+                  </td>
+                  <td data-vi="Phân tích doanh nghiệp" data-en="Enterprise BI">
+                    Phân tích doanh nghiệp
+                  </td>
                 </tr>
                 <tr>
-                  <td><i class="bi bi-hdd-network"></i>Hạ tầng đa chi nhánh</td>
+                  <td>
+                    <i class="bi bi-hdd-network"></i
+                    ><span
+                      data-vi="Hạ tầng đa chi nhánh"
+                      data-en="Enterprise Infrastructure"
+                      >Hạ tầng đa chi nhánh</span
+                    >
+                  </td>
                   <td><i class="bi bi-dash"></i></td>
                   <td class="growth-column"><i class="bi bi-dash"></i></td>
                   <td><i class="bi bi-check-lg check"></i></td>
@@ -450,31 +801,48 @@
           </div>
         </div>
       </section>
-
-     <!-- AI SECTION -->
+      <!-- AI SECTION -->
       <section class="ai-section">
         <div class="container">
           <div class="ai-panel">
             <!-- INTRO -->
             <div class="ai-intro">
-              <h2>Không chỉ là phần mềm — Công nghệ AI thúc đẩy tăng trưởng</h2>
+              <h2
+                data-vi="Không chỉ là phần mềm — Công nghệ AI thúc đẩy tăng trưởng"
+                data-en="AI & Automation"
+              >
+                More than software — AI growth infrastructure
+              </h2>
 
-              <p>
+              <p
+                data-vi="Myspa ứng dụng AI, tự động hóa và dữ liệu giúp doanh nghiệp tối
+                ưu vận hành, chăm sóc khách hàng và tăng trưởng doanh thu."
+                data-en="Myspa combines AI and automation to help you attract, retain and grow customers more efficiently."
+              >
                 Myspa ứng dụng AI, tự động hóa và dữ liệu giúp doanh nghiệp tối
                 ưu vận hành, chăm sóc khách hàng và tăng trưởng doanh thu.
               </p>
 
               <a href="#">
-                Khám phá tính năng AI
+                <span
+                  data-vi="Khám phá tính năng AI"
+                  data-en="Explore AI features"
+                  >Khám phá tính năng AI</span
+                >
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
 
             <!-- CARD 1 -->
             <article class="ai-card">
-              <h3>Gợi ý bán thêm thông minh</h3>
+              <h3 data-vi="Gợi ý bán thêm thông minh" data-en="Smart Upsell">
+                Gợi ý bán thêm thông minh
+              </h3>
 
-              <p>
+              <p
+                data-vi="Đề xuất đúng dịch vụ cho đúng khách hàng vào đúng thời điểm."
+                data-en="Recommend the right services at the right time."
+              >
                 Đề xuất đúng dịch vụ cho đúng khách hàng vào đúng thời điểm.
               </p>
 
@@ -485,9 +853,14 @@
 
             <!-- CARD 2 -->
             <article class="ai-card">
-              <h3>AI giữ chân khách hàng</h3>
+              <h3 data-vi="AI giữ chân khách hàng" data-en="Retention AI">
+                AI giữ chân khách hàng
+              </h3>
 
-              <p>
+              <p
+                data-vi="Phân tích nguy cơ rời bỏ và hỗ trợ tăng tỷ lệ khách hàng quay"
+                data-en="Predict churn and keep customers coming back."
+              >
                 Phân tích nguy cơ rời bỏ và hỗ trợ tăng tỷ lệ khách hàng quay
                 lại.
               </p>
@@ -499,9 +872,12 @@
 
             <!-- CARD 3 -->
             <article class="ai-card">
-              <h3>Tự động hóa</h3>
+              <h3 data-vi="Tự động hóa" data-en="Automation">Tự động hóa</h3>
 
-              <p>
+              <p
+                data-vi="Tự động hóa chiến dịch và quy trình chăm sóc khách hàng đa kênh."
+                data-en="Automate campaigns and workflows across channels."
+              >
                 Tự động hóa chiến dịch và quy trình chăm sóc khách hàng đa kênh.
               </p>
 
@@ -522,9 +898,19 @@
 
             <!-- CARD 4 -->
             <article class="ai-card">
-              <h3>Thấu hiểu khách hàng</h3>
+              <h3
+                data-vi="Thấu hiểu khách hàng"
+                data-en="Customer Intelligence"
+              >
+                Thấu hiểu khách hàng
+              </h3>
 
-              <p>Phân tích hành vi và dữ liệu để hiểu khách hàng sâu hơn.</p>
+              <p
+                data-vi="Phân tích hành vi và dữ liệu để hiểu khách hàng sâu hơn."
+                data-en="Understand behavior and preferences deeply."
+              >
+                Phân tích hành vi và dữ liệu để hiểu khách hàng sâu hơn.
+              </p>
 
               <div class="customer-intelligence">
                 <div class="card4">
@@ -538,9 +924,16 @@
 
             <!-- CARD 5 -->
             <article class="ai-card">
-              <h3>Dự báo doanh thu</h3>
+              <h3 data-vi="Dự báo doanh thu" data-en="Revenue Prediction">
+                Dự báo doanh thu
+              </h3>
 
-              <p>Dự báo xu hướng doanh thu và hỗ trợ ra quyết định hiệu quả.</p>
+              <p
+                data-vi="Dự báo xu hướng doanh thu và hỗ trợ ra quyết định hiệu quả."
+                data-en="Forecast demand and optimize your revenue."
+              >
+                Dự báo xu hướng doanh thu và hỗ trợ ra quyết định hiệu quả.
+              </p>
 
               <div class="revenue-visual">
                 <strong class="growth-number"> +24% </strong>
@@ -565,12 +958,16 @@
           </div>
         </div>
       </section>
-
       <!-- IMPACT -->
       <section class="impact-section">
         <div class="container">
           <div class="section-head impact-head">
-            <h2>Hiệu quả thực tế cho doanh nghiệp làm đẹp</h2>
+            <h2
+              data-vi="Hiệu quả thực tế cho doanh nghiệp làm đẹp"
+              data-en="Real impact for beauty businesses"
+            >
+              Hiệu quả thực tế cho doanh nghiệp làm đẹp
+            </h2>
           </div>
 
           <div class="impact-grid">
@@ -578,7 +975,11 @@
               <div class="impact-icon green"><i class="bi bi-star"></i></div>
               <div>
                 <strong class="green-text">+38%</strong
-                ><span>Tăng tỷ lệ giữ chân khách hàng</span>
+                ><span
+                  data-vi="Tăng tỷ lệ giữ chân khách hàng"
+                  data-en="Increase in customer retention"
+                  >Tăng tỷ lệ giữ chân khách hàng</span
+                >
               </div>
             </article>
             <article class="impact-card">
@@ -587,7 +988,11 @@
               </div>
               <div>
                 <strong class="purple-text">+27%</strong
-                ><span>Tăng trưởng doanh thu trung bình</span>
+                ><span
+                  data-vi="Tăng trưởng doanh thu trung bình"
+                  data-en="Average revenue growth"
+                  >Tăng trưởng doanh thu trung bình</span
+                >
               </div>
             </article>
             <article class="impact-card">
@@ -596,31 +1001,46 @@
               </div>
               <div>
                 <strong class="orange-text">-60%</strong
-                ><span>Giảm khối lượng công việc vận hành</span>
+                ><span
+                  data-vi="Giảm khối lượng công việc vận hành"
+                  data-en="Reduction in operational workload"
+                  >Giảm khối lượng công việc vận hành</span
+                >
               </div>
             </article>
             <article class="impact-card">
               <div class="impact-icon blue"><i class="bi bi-people"></i></div>
               <div>
                 <strong class="blue-text">+2.5x</strong
-                ><span>Tăng số lượt khách đặt lịch lại</span>
+                ><span
+                  data-vi="Tăng số lượt khách đặt lịch lại"
+                  data-en="More repeat bookings"
+                  >Tăng số lượt khách đặt lịch lại</span
+                >
               </div>
             </article>
             <article class="impact-card">
               <div class="impact-icon pink"><i class="bi bi-graph-up"></i></div>
               <div>
                 <strong class="pink-text">+32%</strong
-                ><span>Tăng doanh thu từ khách hàng quay lại</span>
+                ><span
+                  data-vi="Tăng doanh thu từ khách hàng quay lại"
+                  data-en="Growth in upsell revenue"
+                  >Tăng doanh thu từ khách hàng quay lại</span
+                >
               </div>
             </article>
           </div>
         </div>
       </section>
-
       <!-- TRUSTED BRANDS -->
       <section class="trusted-section">
         <div class="container">
-          <p class="trusted-title">
+          <p
+            class="trusted-title"
+            data-vi="Được tin dùng bởi các thương hiệu làm đẹp hàng đầu Việt Nam"
+            data-en="Trusted by leading beauty businesses across Vietnam"
+          >
             Được tin dùng bởi các thương hiệu làm đẹp hàng đầu Việt Nam
           </p>
 
@@ -711,38 +1131,63 @@
       <section class="faq-section section">
         <div class="container">
           <div class="section-head faq-head">
-            <h2>Câu hỏi thường gặp</h2>
+            <h2
+              data-vi="Câu hỏi thường gặp"
+              data-en="Frequently asked questions"
+            >
+              Câu hỏi thường gặp
+            </h2>
           </div>
 
           <div class="faq-grid">
             <div class="faq-column">
               <details class="faq-item">
                 <summary>
-                  Tôi có thể thay đổi gói sau này không?<i
-                    class="bi bi-plus-lg"
-                  ></i>
+                  <span
+                    data-vi="Tôi có thể thay đổi gói sau này không?"
+                    data-en="Can I change my plan later?"
+                    >Tôi có thể thay đổi gói sau này không?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Có. Bạn có thể nâng cấp hoặc thay đổi gói khi quy mô và nhu
+                  cầu doanh nghiệp thay đổi."
+                  data-en="Yes. You can upgrade or change your plan as your business grows and your needs change."
+                >
                   Có. Bạn có thể nâng cấp hoặc thay đổi gói khi quy mô và nhu
                   cầu doanh nghiệp thay đổi.
                 </p>
               </details>
               <details class="faq-item">
                 <summary>
-                  Thời gian triển khai mất bao lâu?<i class="bi bi-plus-lg"></i>
+                  <span
+                    data-vi="Thời gian triển khai mất bao lâu?"
+                    data-en="How long does onboarding take?"
+                    >Thời gian triển khai mất bao lâu?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Thời gian triển khai phụ thuộc vào quy mô và dữ liệu, nhưng
+                  hầu hết doanh nghiệp có thể bắt đầu nhanh chóng."
+                  data-en="Onboarding time depends on your business size and data, but most businesses can get started quickly."
+                >
                   Thời gian triển khai phụ thuộc vào quy mô và dữ liệu, nhưng
                   hầu hết doanh nghiệp có thể bắt đầu nhanh chóng.
                 </p>
               </details>
               <details class="faq-item">
                 <summary>
-                  Myspa có hỗ trợ chuyển dữ liệu không?<i
-                    class="bi bi-plus-lg"
-                  ></i>
+                  <span
+                    data-vi="Myspa có hỗ trợ chuyển dữ liệu không?"
+                    data-en="Do you help with data migration?"
+                    >Myspa có hỗ trợ chuyển dữ liệu không?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Có. Myspa hỗ trợ chuyển dữ liệu từ hệ thống cũ tùy theo gói
+                  dịch vụ và nhu cầu thực tế."
+                  data-en="Yes. Myspa supports data migration from your existing system depending on your service plan and specific requirements."
+                >
                   Có. Myspa hỗ trợ chuyển dữ liệu từ hệ thống cũ tùy theo gói
                   dịch vụ và nhu cầu thực tế.
                 </p>
@@ -752,31 +1197,51 @@
             <div class="faq-column">
               <details class="faq-item">
                 <summary>
-                  Myspa có phù hợp với nhiều chi nhánh không?<i
-                    class="bi bi-plus-lg"
-                  ></i>
+                  <span
+                    data-vi="Myspa có phù hợp với nhiều chi nhánh không?"
+                    data-en="Is Myspa suitable for multi-branch businesses?"
+                    >Myspa có phù hợp với nhiều chi nhánh không?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Có. Gói Tăng trưởng và Doanh nghiệp hỗ trợ quản lý nhiều chi
+                  nhánh trên cùng một hệ thống."
+                  data-en="Yes. Growth and Enterprise plans support multi-branch management within a single system."
+                >
                   Có. Gói Tăng trưởng và Doanh nghiệp hỗ trợ quản lý nhiều chi
                   nhánh trên cùng một hệ thống.
                 </p>
               </details>
               <details class="faq-item">
                 <summary>
-                  Myspa có gì khác biệt?<i class="bi bi-plus-lg"></i>
+                  <span
+                    data-vi="Myspa có gì khác biệt?"
+                    data-en="What makes Myspa different?"
+                    >Myspa có gì khác biệt?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Myspa hợp nhất quản lý vận hành, khách hàng, bán hàng,
+                  marketing và dữ liệu trên một nền tảng."
+                  data-en="Myspa unifies operations, customer management, sales, marketing, and data on one platform."
+                >
                   Myspa hợp nhất quản lý vận hành, khách hàng, bán hàng,
                   marketing và dữ liệu trên một nền tảng.
                 </p>
               </details>
               <details class="faq-item">
                 <summary>
-                  Myspa có hỗ trợ đào tạo và hướng dẫn không?<i
-                    class="bi bi-plus-lg"
-                  ></i>
+                  <span
+                    data-vi="Myspa có hỗ trợ đào tạo và hướng dẫn không?"
+                    data-en="Do you offer training and support?"
+                    >Myspa có hỗ trợ đào tạo và hướng dẫn không?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Có. Đội ngũ Myspa hỗ trợ triển khai và đào tạo sử dụng tùy
+                  theo gói dịch vụ."
+                  data-en="Yes. The Myspa team provides implementation support and user training depending on your service plan."
+                >
                   Có. Đội ngũ Myspa hỗ trợ triển khai và đào tạo sử dụng tùy
                   theo gói dịch vụ.
                 </p>
@@ -786,31 +1251,51 @@
             <div class="faq-column">
               <details class="faq-item">
                 <summary>
-                  Myspa hỗ trợ những phương thức thanh toán nào?<i
-                    class="bi bi-plus-lg"
-                  ></i>
+                  <span
+                    data-vi="Myspa hỗ trợ những phương thức thanh toán nào?"
+                    data-en="What payment methods do you accept?"
+                    >Myspa hỗ trợ những phương thức thanh toán nào?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Phương thức thanh toán có thể được cấu hình theo gói dịch vụ
+                  và hợp đồng cụ thể."
+                  data-en="Payment methods can be configured based on your service plan and specific contract."
+                >
                   Phương thức thanh toán có thể được cấu hình theo gói dịch vụ
                   và hợp đồng cụ thể.
                 </p>
               </details>
               <details class="faq-item">
                 <summary>
-                  Có được dùng thử miễn phí không?<i class="bi bi-plus-lg"></i>
+                  <span
+                    data-vi="Có được dùng thử miễn phí không?"
+                    data-en="Is there a free trial available?"
+                    >Có được dùng thử miễn phí không?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Có. Bạn có thể trải nghiệm hệ thống miễn phí trước khi lựa
+                  chọn gói phù hợp."
+                  data-en="Yes. You can try the system for free before choosing the plan that best fits your needs."
+                >
                   Có. Bạn có thể trải nghiệm hệ thống miễn phí trước khi lựa
                   chọn gói phù hợp.
                 </p>
               </details>
               <details class="faq-item">
                 <summary>
-                  Myspa có thể tích hợp với các công cụ khác không?<i
-                    class="bi bi-plus-lg"
-                  ></i>
+                  <span
+                    data-vi="Myspa có thể tích hợp với các công cụ khác không?"
+                    data-en="Can I integrate Myspa with other tools?"
+                    >Myspa có thể tích hợp với các công cụ khác không?</span
+                  ><i class="bi bi-plus-lg"></i>
                 </summary>
-                <p>
+                <p
+                  data-vi="Có. Myspa có thể tích hợp với nhiều nền tảng marketing, thanh
+                  toán và công cụ vận hành khác."
+                  data-en="Yes. Myspa can integrate with various marketing platforms, payment solutions, and other business operation tools."
+                >
                   Có. Myspa có thể tích hợp với nhiều nền tảng marketing, thanh
                   toán và công cụ vận hành khác.
                 </p>
@@ -819,81 +1304,66 @@
           </div>
         </div>
       </section>
-
-      <!-- FINAL CTA -->
-      <section class="final-cta-section">
+      <!-- CTA -->
+      <section class="section cta-section">
         <div class="container">
-          <div class="final-cta">
-            <div class="final-cta-copy">
-              <h2>
-                Xây dựng hạ tầng cho
-                doanh nghiệp làm đẹp cùng Myspa
-              </h2>
+          <div class="cta-banner">
+            <div class="cta-grid">
+              <div class="cta-content">
+                <h2
+                  data-vi="Xây dựng hạ tầng kinh doanh ngành làm đẹp cùng Myspa"
+                  data-en="Build your beauty business infrastructure with Myspa"
+                >
+                  Xây dựng hạ tầng kinh doanh ngành làm đẹp cùng Myspa
+                </h2>
 
-              <p>
-                Chuẩn hóa vận hành, tự động hóa quy trình và tăng trưởng doanh
-                thu trên một nền tảng thống nhất.
-              </p>
+                <p
+                  data-vi="Mở rộng vận hành, tự động hóa quy trình và tăng trưởng doanh thu trên một nền tảng hợp nhất."
+                  data-en="Scale operations, automate workflows and grow revenue on one unified platform."
+                >
+                  Mở rộng vận hành, tự động hóa quy trình và tăng trưởng doanh
+                  thu trên một nền tảng hợp nhất.
+                </p>
 
-              <div class="final-cta-actions">
-                <a href="#" class="btn btn-primary">
-                  Đặt lịch demo
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-                <a href="#" class="btn btn-dark-outline">
-                  Trò chuyện với chuyên gia
-                  <i class="bi bi-arrow-right"></i>
-                </a>
+                <div class="cta-actions">
+                  <a href="#" class="btn btn-light">
+                    <span
+                      data-vi="Đặt lịch demo doanh nghiệp"
+                      data-en="Book enterprise demo"
+                      >Đặt lịch demo doanh nghiệp</span
+                    >
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+
+                  <a href="#" class="btn btn-ghost">
+                    <span
+                      data-vi="Trao đổi với đội ngũ tư vấn"
+                      data-en="Talk to solutions team"
+                      >Trao đổi với đội ngũ tư vấn</span
+                    >
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div class="final-cta-visual">
-              <div class="float-card left">
+              <div class="cta-visual">
                 <img
                   src="public/image/cta-revenue-card.png"
-                  alt="Thẻ doanh thu"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
+                  alt="Doanh thu hôm nay"
+                  class="cta-card-image cta-card-left"
                 />
-                <div class="media-placeholder small-card" style="display: none">
-                  <i class="bi bi-bar-chart-line"></i>
-                  <span>Ảnh doanh thu</span>
-                </div>
-              </div>
 
-              <div class="center-person">
                 <img
                   src="public/image/woman.png"
-                  alt="Chuyên viên Myspa"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
+                  alt="Chuyên viên Myspa sử dụng máy tính bảng"
+                  class="cta-woman"
                 />
-                <div
-                  class="media-placeholder person-card"
-                  style="display: none"
-                >
-                  <i class="bi bi-person-workspace"></i>
-                  <span>Ảnh nhân vật</span>
-                </div>
-              </div>
 
-              <div class="float-card right">
                 <img
                   src="public/image/cta-rate-card.png"
-                  alt="Thẻ tỷ lệ chốt đơn"
-                  onerror="
-                    this.style.display = 'none';
-                    this.nextElementSibling.style.display = 'flex';
-                  "
+                  alt="Tỷ lệ chốt đơn"
+                  class="cta-card-image cta-card-right"
                 />
-                <div class="media-placeholder small-card" style="display: none">
-                  <i class="bi bi-pie-chart"></i>
-                  <span>Ảnh chỉ số</span>
-                </div>
               </div>
             </div>
           </div>
@@ -932,6 +1402,16 @@
           closeMobileMenu();
         }
       });
+
+      function changeLanguage(lang) {
+        document.querySelectorAll("[data-vi][data-en]").forEach((element) => {
+          element.textContent = element.dataset[lang];
+        });
+
+        localStorage.setItem("language", lang);
+      }
+      const savedLanguage = localStorage.getItem("language") || "vi";
+      changeLanguage(savedLanguage);
     </script>
   </body>
 </html>
